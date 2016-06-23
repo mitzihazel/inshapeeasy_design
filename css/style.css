@@ -1,0 +1,186 @@
+@media (min-width: 360px) {
+	body {
+		padding: 0px !important;
+		overflow-x: hidden;
+	}
+}
+body {
+	padding: 50px;
+	background-color: whitesmoke !important;
+	overflow-x: hidden; 
+}
+.container {
+	padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+.circular {
+	width: 150px;
+	height: 150px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url(../images/images.jpg) no-repeat;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	background-position:50% 50%;
+	background-size: cover;
+	margin: auto;
+    position: relative;
+    border: 2px solid white;
+}
+
+.profile-image {
+	padding: 100px 100px 50px;
+	background: rgba(240,47,23,1);
+	background: -moz-linear-gradient(left, rgba(240,47,23,1) 0%, rgba(240,47,23,1) 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(240,47,23,1)), color-stop(5%, rgba(240,47,23,1)), color-stop(39%, rgba(246,41,12,1)), color-stop(79%, rgba(241,111,92,1)), color-stop(100%, rgba(231,56,39,1)));
+	background: -webkit-linear-gradient(left, rgba(240,47,23,1) 0%, rgba(240,47,23,1) 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
+	background: -o-linear-gradient(left, rgba(240,47,23,1) 0%, rgba(240,47,23,1) 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
+	background: -ms-linear-gradient(left, rgba(240,47,23,1) 0%, rgba(240,47,23,1) 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
+	background: linear-gradient(to right, rgba(240,47,23,1) 0%, rgba(240,47,23,1) 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f02f17', endColorstr='#e73827', GradientType=1 );
+}
+
+#name {
+	color: white;
+}
+
+#work {
+	color: red;
+	text-transform: uppercase;
+	text-shadow: 0px 2px white;
+}
+
+.profile-details {
+	background-color: white;
+	margin-top: -1em;
+	padding: 20px 20px;
+}
+
+#title {
+	color: red;
+}
+
+#info {
+	color: black;
+	margin-top: -0.5em;
+}
+
+/**
+* Style for account user change password
+*/
+/* Style the buttons that are used to open and close the accordion panel */
+button.accordion {
+    background-color: rgba(240,47,23,1);
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.accordion.active, button.accordion:hover {
+    background-color: red;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+}
+
+/* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
+div.panel.show {
+    display: block !important;
+}
+
+/**
+* CONNECTIONS TAB DESIGN
+*/
+.connections {
+	padding: 30px;
+	background-color: white;
+	border-radius: 10px 10px;	
+}
+
+.sl-captions {
+    position: relative;
+    top: 20px;
+    text-align: center;
+    padding: 50px;
+}
+
+.sl-captions >  h3 {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+/**
+* Customizing Calendar in Desktop Display.
+*/
+div#calendar {
+    padding: 20px 0px -1px;
+    background: rgba(240,47,23,1);
+    color: white;
+}
+
+/* Buttons Arrangement in Desktop */
+button.fc-prev-button.fc-button.fc-state-default.fc-corner-left {
+    position: absolute;
+    left: 10%;
+    background: transparent;
+    border-style: none;
+}
+
+button.fc-next-button.fc-button.fc-state-default.fc-corner-right {
+    position: absolute;
+    right: 10%;
+    background: transparent;
+    border-style: none;
+}
+
+button.fc-today-button.fc-button.fc-state-default.fc-corner-left.fc-corner-right.fc-state-disabled,
+button.fc-today-button.fc-button.fc-state-default.fc-corner-left.fc-corner-right {
+    position: absolute;
+    left: 70%;
+}
+
+/* Date Today highlighted */
+td.fc-day.fc-widget-content.fc-thu.fc-today.fc-state-highlight {
+	background: rgba(240,47,23,1);
+}
+
+/* Calenday Scroll */
+.fc-scroller.fc-day-grid-container {
+    overflow-x: hidden;
+    overflow-y: hidden !important;
+    height: 100% !important;
+}
+
+/* Date name */
+.fc-toolbar .fc-left {
+    position: absolute;
+    left: 25%;
+}
+
+/**
+* Calendar table contents
+*/
+.fc-row .fc-bg {
+   background-color: #222;
+}
+
+/* Calendar Borders */
+.fc th, .fc td {
+    border-style: none !important;
+}
+
+.fc-view, .fc-view > table {
+    margin-top: 3em;
+}

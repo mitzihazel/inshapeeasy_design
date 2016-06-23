@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta name="description" content="">
+    	<meta name="author" content="">
+
+        <title>My own Template</title>
+
+        <!-- Main Stylesheet CSS -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <link rel="stylesheet" href="css/social-links.css">
+        <link rel="stylesheet" href="css/panels.css">
+
+        <!-- Main JS -->
+        <script src="js/scripts.js"></script>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+        <!-- Full Calendar -->
+        <script src="fullcalendar/lib/moment.min.js"></script>
+        <script src="fullcalendar/fullcalendar.js"></script>
+        <script src="fullcalendar/scheduler.js"></script>
+        <link rel="stylesheet" href="fullcalendar/fullcalendar.css">
+        <link rel="stylesheet" href="fullcalendar/scheduler.css">
+
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-target="#collapseOne" href="#collapseOne">
+                                    Account
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <div class="profile-image">
+                                   <div class="circular"></div>
+
+                                   <!-- Name of User -->
+                                   <div class="profile-name text-center">
+                                        <h2 id="name">Jane Doe</h2>
+                                        <h4 id="work">Developer</h4>
+                                   </div>
+                                </div>
+
+                                <!-- Detailed info of the user -->
+                                <div class="profile-details">
+                                    <h4 id="title">Email</h4>
+                                    <h3 id="info">mitzi.bootyard@gmail.com</h3>
+                                    <hr>
+                                    <h4 id="title">Username</h4>
+                                    <h3 id="info">admin</h3>
+                                    <hr>
+                                </div>
+
+                                <!-- Password Edit -->
+                                <div class="panel-heading" id="changeP">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-target="#changePass" href="#changePass">
+                                            Change Password
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="changePass" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="old">Old Password:</label>
+                                            <input type="text" class="form-control" id="old">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="new">New Password:</label>
+                                            <input type="text" class="form-control" id="new">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="confirm">Confirm Password:</label>
+                                            <input type="text" class="form-control" id="confirm">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel-group" id="accordion2">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-target="#collapseTwo" href="#collapseTwo">
+                                    Connections
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <div class="connections">
+                                    <ul class="soc" align="center">
+                                        <li><a class="soc-twitter" href="#"></a></li>
+                                        <li><a class="soc-facebook" href="#"></a></li>
+                                        <li><a class="soc-google" href="#"></a></li>
+                                        <li><a class="soc-pinterest" href="#"></a></li>
+                                        <li><a class="soc-linkedin" href="#"></a></li>
+                                        <li><a class="soc-rss soc-icon-last" href="#"></a></li>
+                                    </ul>
+                                </div>
+                                <div class="sl-captions">
+                                    <h3>Get Cheered On!</h3>
+                                    <p>Post what you're doing so the people around knows.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel-group" id="accordion2">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-target="#calendar" href="#calendar">
+                                    Calendar
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="calendar" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <div id="calendar"> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(document).ready(function() {
+
+                    // page is now ready, initialize the calendar...
+
+                    $('#calendar').fullCalendar({
+                        // put your options and callbacks here
+                    })
+
+                });
+            </script>
+        </div>
+    </body>
+</html>
+
+
