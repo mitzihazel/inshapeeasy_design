@@ -148,7 +148,8 @@ button.fc-next-button.fc-button.fc-state-default.fc-corner-right {
 button.fc-today-button.fc-button.fc-state-default.fc-corner-left.fc-corner-right.fc-state-disabled,
 button.fc-today-button.fc-button.fc-state-default.fc-corner-left.fc-corner-right {
     position: absolute;
-    left: 70%;
+    left: 45%;
+    top: 20%;
 }
 
 /* Date Today highlighted */
@@ -165,8 +166,8 @@ td.fc-day.fc-widget-content.fc-thu.fc-today.fc-state-highlight {
 
 /* Date name */
 .fc-toolbar .fc-left {
-    position: absolute;
-    left: 25%;
+    position: relative;
+    left: 30%;
 }
 
 /**
@@ -182,5 +183,13 @@ td.fc-day.fc-widget-content.fc-thu.fc-today.fc-state-highlight {
 }
 
 .fc-view, .fc-view > table {
-    margin-top: 3em;
+    margin-top: 5em;
+}
+
+/**
+* Style for the Charts
+*/ 
+div#health {
+    padding: 30px 0px;
+    background-color: #222;
 }

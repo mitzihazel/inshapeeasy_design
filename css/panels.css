@@ -33,6 +33,10 @@
     content:"\e080";
 }
 
+.panel-collapse.collapse.in {
+	
+}
+
 .panel-body {
 	padding: 0px !important;
 }
@@ -52,4 +56,33 @@ div#changeP {
     float: right;
     margin-right: 10%;
     box-shadow: 0px 10px 15px grey;
-}2
+    margin-bottom: 3em;
+}
+
+/**
+* Style for account user change password
+*/
+div#changePass {
+    padding: 30px;
+    margin-top: 5em;
+    font-size: large;
+    font-family: arial, sans-serif;
+    color: white;
+    background-color: #222;
+}
+
+#changePass > .panel-body {
+    padding: 15px;
+    height: 15em;
+    display: inline;
+}
+
+/* Form Groups in user Account */
+.form-group {
+	font-size: 20px;
+}
+
+.form-control {
+	height: 40px !important;
+}
+

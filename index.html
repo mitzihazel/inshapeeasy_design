@@ -29,6 +29,9 @@
         <link rel="stylesheet" href="fullcalendar/fullcalendar.css">
         <link rel="stylesheet" href="fullcalendar/scheduler.css">
 
+        <!-- Chart -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.min.js"></script>
+
 
     </head>
     <body>
@@ -74,7 +77,7 @@
                                         </a>
                                     </h4>
                                 </div>
-                                <div id="changePass" class="panel-collapse collapse in">
+                                <div id="changePass" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <div class="form-group">
                                             <label for="old">Old Password:</label>
@@ -125,8 +128,25 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4"></div>
                 <div class="col-sm-4">
+                </div>
+                <div class="col-sm-4">
+                    <div class="health">
+                        <div class="panel-group" id="accordion2">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-target="#health" href="#health">
+                                        Health Report 
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="health" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <canvas id="myChart" width="400" height="400"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="panel-group" id="accordion2">
@@ -156,6 +176,46 @@
 
                 });
             </script>
+            <!-- Charts configuration -->
+            <script>
+                var ctx = document.getElementById("myChart");
+                var myChart = new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                        datasets: [{
+                            label: '# of Votes',
+                            data: [12, 19, 3, 5, 2, 3],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255,99,132,1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero:true
+                                }
+                            }]
+                        }
+                    }
+                });
+                </script>
         </div>
     </body>
 </html>
