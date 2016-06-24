@@ -78,13 +78,21 @@ body {
 * Custom Panel for Change Password
 */
 div#changeP {
-    height: 80px;
-    width: 150px;
+    height: 70px;
+    width: 80%;
     border-radius: 150px !important;
     float: right;
     margin-right: 10%;
     box-shadow: 0px 10px 15px grey;
     margin-bottom: 3em;
+}
+
+#changeP a {
+    font-size: 22px;
+}
+
+label {
+	font-weight: 0 !important;
 }
 
 /**
@@ -316,4 +324,33 @@ div#cal-stats, div#pace-stats, div#speed-stats {
 	position: relative;
 	float: right;
 	margin-top: 1em;
+}
+
+/**
+* Subscription Designs.
+*/
+#subscript {
+	padding: 20px;
+}
+
+.form-left {
+	float: left;
+}
+
+.form-right {
+	float: right;
+}
+
+input#subscribe {
+    width: 17em;
+}
+
+button.btn.btn-primary {
+    margin-top: 2.3em;
+    background-color: rgba(240,47,23,1);
+    border-color: red;
+}
+
+#subscription .panel-body {
+    height: 150px;
 }

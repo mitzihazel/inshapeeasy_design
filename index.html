@@ -51,7 +51,19 @@
                         </div>
                         <div id="subscription" class="panel-collapse collapse in">
                             <div class="panel-body">
-                                <div id="subscription"> </div>
+                                <div id="subscript">
+                                    <form>
+                                        <div class="form-left">
+                                            <fieldset class="form-group">
+                                                <label for="exampleInputEmail1">Subscribe</label>
+                                                <input type="text" class="form-control" id="subscribe" placeholder="Enter here..">
+                                            </fieldset>
+                                        </div>
+                                        <div class="form-right">
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -276,9 +288,9 @@
                 var myChart = new Chart(ctx, {
                     type: 'bar',
                     data: {
-                        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                        labels: ["Cardio", "Calories", "Time", "Pace", "BPM", "Speed"],
                         datasets: [{
-                            label: '# of Votes',
+                            label: 'Exercises Statistics',
                             data: [12, 19, 3, 5, 2, 3],
                             backgroundColor: [
                                 'rgba(255, 99, 132, 2)',
@@ -310,9 +322,9 @@
                             }]
                         },
                         legend: {
-                            display: true,
+                            display: false,
                             labels: {
-                                fontColor: 'rgb(255, 99, 132)'
+                                fontColor: 'rgb(0, 0, 0)'
                             },
                         }
                     }
