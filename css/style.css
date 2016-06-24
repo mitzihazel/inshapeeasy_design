@@ -1,3 +1,8 @@
+/* Main wrapper */
+div#whole-wrapper {
+    padding: 20px;
+}
+
 /**
 * User Account Designs.
 */
@@ -56,7 +61,7 @@ body {
 #work {
 	color: red;
 	text-transform: uppercase;
-	text-shadow: 0px 2px white;
+	text-shadow: 0px 0px 7px white;
 }
 
 .profile-details {
@@ -177,12 +182,18 @@ div.connects
 
 .sl-captions {
     position: relative;
-    top: 20px;
     text-align: center;
     padding: 50px;
-    background-color: rgba(240,47,23,1);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    background: rgba(248,80,50,1);
+	background: -moz-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(231,56,39,0.99) 9%, rgba(246,41,12,0.93) 43%, rgba(240,47,23,0.88) 74%, rgba(241,111,92,0.84) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(248,80,50,1)), color-stop(9%, rgba(231,56,39,0.99)), color-stop(43%, rgba(246,41,12,0.93)), color-stop(74%, rgba(240,47,23,0.88)), color-stop(100%, rgba(241,111,92,0.84)));
+	background: -webkit-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(231,56,39,0.99) 9%, rgba(246,41,12,0.93) 43%, rgba(240,47,23,0.88) 74%, rgba(241,111,92,0.84) 100%);
+	background: -o-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(231,56,39,0.99) 9%, rgba(246,41,12,0.93) 43%, rgba(240,47,23,0.88) 74%, rgba(241,111,92,0.84) 100%);
+	background: -ms-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(231,56,39,0.99) 9%, rgba(246,41,12,0.93) 43%, rgba(240,47,23,0.88) 74%, rgba(241,111,92,0.84) 100%);
+	background: linear-gradient(to right, rgba(248,80,50,1) 0%, rgba(231,56,39,0.99) 9%, rgba(246,41,12,0.93) 43%, rgba(240,47,23,0.88) 74%, rgba(241,111,92,0.84) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#f16f5c', GradientType=1 );
 }
 
 .sl-captions >  h3 {
@@ -271,7 +282,7 @@ td.fc-day.fc-widget-content.fc-thu.fc-today.fc-state-highlight {
 /**
 * Date choices
 */
-.date-choice ul {
+.date-choice ul, nav ul {
 	list-style-type: none;
     position: relative;
     width: 100%;
@@ -281,7 +292,7 @@ td.fc-day.fc-widget-content.fc-thu.fc-today.fc-state-highlight {
     float: left;
     margin-left: 5%;
 }
-.date-choice ul li a {
+.date-choice ul li a, nav ul li a {
     color: black !important; /*  rgba(255,99,132,1) -- PINK font color for labels. */
     font-weight: bold;
 }
@@ -299,10 +310,18 @@ div#health {
 */
 .stats-wrapper {
     padding: 50px;
-    background-color: rgba(240,47,23,1); /* Theme major color [ similar to red-orange. ]*/
+   	background-color: rgba(240,47,23,1);  /* Theme major color [ similar to red-orange. ]*/
     margin-top: 20px;
     height: 20em;
     color: white;
+	/*background: rgba(248,80,50,1);
+	background: -moz-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(231,56,39,1) 9%, rgba(240,47,23,1) 61%, rgba(246,41,12,1) 89%, rgba(241,111,92,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(248,80,50,1)), color-stop(9%, rgba(231,56,39,1)), color-stop(61%, rgba(240,47,23,1)), color-stop(89%, rgba(246,41,12,1)), color-stop(100%, rgba(241,111,92,1)));
+	background: -webkit-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(231,56,39,1) 9%, rgba(240,47,23,1) 61%, rgba(246,41,12,1) 89%, rgba(241,111,92,1) 100%);
+	background: -o-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(231,56,39,1) 9%, rgba(240,47,23,1) 61%, rgba(246,41,12,1) 89%, rgba(241,111,92,1) 100%);
+	background: -ms-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(231,56,39,1) 9%, rgba(240,47,23,1) 61%, rgba(246,41,12,1) 89%, rgba(241,111,92,1) 100%);
+	background: linear-gradient(to right, rgba(248,80,50,1) 0%, rgba(231,56,39,1) 9%, rgba(240,47,23,1) 61%, rgba(246,41,12,1) 89%, rgba(241,111,92,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#f16f5c', GradientType=1 );*/
 }
 
 #stat-left {
@@ -341,8 +360,16 @@ div#cal-stats, div#pace-stats, div#speed-stats {
 	float: right;
 }
 
-input#subscribe {
-    width: 17em;
+@media (min-width: 360px) {
+	input#subscribe {
+	    width: 14em;
+	}
+}
+
+@media (min-width: 768px) {
+	input#subscribe {
+	    width: 17em;
+	}
 }
 
 button.btn.btn-primary {
@@ -353,4 +380,15 @@ button.btn.btn-primary {
 
 #subscription .panel-body {
     height: 150px;
+}
+
+/**
+* Food Diary Styles.
+*/
+div#food-diary { /* Main wrapper */
+    padding: 15px 2px;
+}
+
+nav ul li { /* Nav tabs */
+	left: 5%;
 }

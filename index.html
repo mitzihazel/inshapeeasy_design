@@ -14,13 +14,12 @@
         <link rel="stylesheet" href="css/social-links.css">
         <link rel="stylesheet" href="css/panels.css">
 
-        <!-- Main JS -->
-        <script src="js/scripts.js"></script>
+        <!-- JQuery -->
+        <script src="js/jquery.js"></script>
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
         <!-- Full Calendar -->
@@ -36,215 +35,95 @@
         <!-- Google Chart -->
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
+        <!-- CUSTOM SCRIPTS -->
+        <!-- Main JS -->
+        <script src="js/scripts.js"></script>
+
     </head>
     <body>
         <div class="container">
-            <div class="row">
-                <div class="col-sm-4"> <!-- Subscription -->
-                    <div class="panel-group subscription" id="accordion2">
-                        <div class="panel-heading" id="subcribe">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-target="#subscription" href="#subscription">
-                                    Subscription
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="subscription" class="panel-collapse collapse in">
-                            <div class="panel-body">
-                                <div id="subscript">
-                                    <form>
-                                        <div class="form-left">
-                                            <fieldset class="form-group">
-                                                <label for="exampleInputEmail1">Subscribe</label>
-                                                <input type="text" class="form-control" id="subscribe" placeholder="Enter here..">
-                                            </fieldset>
-                                        </div>
-                                        <div class="form-right">
-                                            <button type="submit" class="btn btn-primary">Submit</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4"> <!-- user Account -->
-                    <div class="panel-group" id="accordion">
-                        <div class="panel-heading" id="user">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-target="#collapseOne" href="#collapseOne">
-                                    Account
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseOne" class="panel-collapse collapse in">
-                            <div class="panel-body">
-                                <div class="profile-image">
-                                   <div class="circular"></div>
-
-                                   <!-- Name of User -->
-                                   <div class="profile-name text-center">
-                                        <h2 id="name">Jane Doe</h2>
-                                        <h4 id="work">Developer</h4>
-                                   </div>
-                                </div>
-
-                                <!-- Detailed info of the user -->
-                                <div class="profile-details">
-                                    <h4 id="title">Email</h4>
-                                    <h3 id="info">mitzi.bootyard@gmail.com</h3>
-                                    <hr>
-                                    <h4 id="title">Username</h4>
-                                    <h3 id="info">admin</h3>
-                                    <hr>
-                                </div>
-
-                                <!-- Password Edit -->
-                                <div class="panel-heading" id="changeP">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-target="#changePass" href="#changePass">
-                                            Change Password
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="changePass" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <div class="form-group">
-                                            <label for="old">Old Password:</label>
-                                            <input type="text" class="form-control" id="old">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="new">New Password:</label>
-                                            <input type="text" class="form-control" id="new">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="confirm">Confirm Password:</label>
-                                            <input type="text" class="form-control" id="confirm">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4"> <!-- Connections -->
-                    <div class="panel-group connects" id="accordion2">
-                        <div class="panel-heading" id="connect">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-target="#collapseTwo" href="#collapseTwo">
-                                    Connections
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseTwo" class="panel-collapse collapse in">
-                            <div class="panel-body">
-                                <div class="connections">
-                                    <ul class="soc" align="center">
-                                        <li><a class="soc-twitter" href="#"></a></li>
-                                        <li><a class="soc-facebook" href="#"></a></li>
-                                        <li><a class="soc-google" href="#"></a></li>
-                                        <li><a class="soc-pinterest" href="#"></a></li>
-                                        <li><a class="soc-linkedin" href="#"></a></li>
-                                        <li><a class="soc-rss soc-icon-last" href="#"></a></li>
-                                    </ul>
-                                </div>
-                                <div class="sl-captions">
-                                    <h3>Get Cheered On!</h3>
-                                    <p>Post what you're doing so the people around knows.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4">
-                </div>
-                <div class="col-sm-4"> <!-- Health Reports --> 
-                    <div class="health">
-                        <div class="panel-group" id="accordion2">
-                            <div class="panel-heading" id="health-report">
+            <div id="whole-wrapper">
+                <div class="row">
+                    <div class="col-sm-4"> <!-- Subscription -->
+                        <div class="panel-group subscription" id="accordion2">
+                            <div class="panel-heading" id="subcribe">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-target="#health" href="#health">
-                                        Health Report 
+                                    <a data-toggle="collapse" data-target="#subscription" href="#subscription">
+                                        Subscription
                                     </a>
                                 </h4>
                             </div>
-                            <div id="health" class="panel-collapse collapse in">
+                            <div id="subscription" class="panel-collapse collapse in">
                                 <div class="panel-body">
-                                    <!-- Date Choices -->
-                                    <div class="date-choice">
-                                        <ul>
-                                            <li>
-                                                <a href="#6months">6 months</a>
-                                            </li>
-                                            <li>
-                                                <a href="#4weeks">4 weeks</a>
-                                            </li>
-                                            <li>
-                                                <a href="#7days">7 Days</a>
-                                            </li>
-                                            <li>
-                                                <a href="#12months">12 months</a>
-                                            </li>
-                                        </ul>
+                                    <div id="subscript">
+                                        <form>
+                                            <div class="form-left">
+                                                <fieldset class="form-group">
+                                                    <label for="exampleInputEmail1">Subscribe</label>
+                                                    <input type="text" class="form-control" id="subscribe" placeholder="Enter here..">
+                                                </fieldset>
+                                            </div>
+                                            <div class="form-right">
+                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                            </div>
+                                        </form>
                                     </div>
-                                    <!-- Chart Display -->
-                                    <canvas id="myChart" width="400" height="400"></canvas>
-                                    <!-- Written Statistics -->
-                                    <div class="stats-wrapper">
-                                        <div id="cardio-stats">
-                                            <div id="stat-left">
-                                                <div class="icon"><i class="fa fa-bicycle" aria-hidden="true"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4"> <!-- user Account -->
+                        <div class="panel-group" id="accordion">
+                            <div class="panel-heading" id="user">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-target="#collapseOne" href="#collapseOne">
+                                        Account
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <div class="profile-image">
+                                       <div class="circular"></div>
+
+                                       <!-- Name of User -->
+                                       <div class="profile-name text-center">
+                                            <h2 id="name">Jane Doe</h2>
+                                            <h4 id="work">Developer</h4>
+                                       </div>
+                                    </div>
+
+                                    <!-- Detailed info of the user -->
+                                    <div class="profile-details">
+                                        <h4 id="title">Email</h4>
+                                        <h3 id="info">mitzi.bootyard@gmail.com</h3>
+                                        <hr>
+                                        <h4 id="title">Username</h4>
+                                        <h3 id="info">admin</h3>
+                                        <hr>
+                                    </div>
+
+                                    <!-- Password Edit -->
+                                    <div class="panel-heading" id="changeP">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-target="#changePass" href="#changePass">
+                                                Change Password
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="changePass" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <div class="form-group">
+                                                <label for="old">Old Password:</label>
+                                                <input type="text" class="form-control" id="old">
                                             </div>
-                                            <div id="stat-right">
-                                                <div class="value">281.4 <span class="small">km</span></div>
-                                                <div class="detail">Total distance</div>
+                                            <div class="form-group">
+                                                <label for="new">New Password:</label>
+                                                <input type="text" class="form-control" id="new">
                                             </div>
-                                        </div>
-                                        <div id="cal-stats">
-                                            <div id="stat-left">
-                                                <div class="icon"><i class="fa fa-bicycle" aria-hidden="true"></i></div>
-                                            </div>
-                                            <div id="stat-right">
-                                                <div class="value">281.4 <span class="small">km</span></div>
-                                                <div class="detail">Total distance</div>
-                                            </div>
-                                        </div>
-                                        <div id="time-stats">
-                                            <div id="stat-left">
-                                                <div class="icon"><i class="fa fa-bicycle" aria-hidden="true"></i></div>
-                                            </div>
-                                            <div id="stat-right">
-                                                <div class="value">281.4 <span class="small">km</span></div>
-                                                <div class="detail">Total distance</div>
-                                            </div>
-                                        </div>
-                                        <div id="pace-stats">
-                                            <div id="stat-left">
-                                                <div class="icon"><i class="fa fa-bicycle" aria-hidden="true"></i></div>
-                                            </div>
-                                            <div id="stat-right">
-                                                <div class="value">281.4 <span class="small">km</span></div>
-                                                <div class="detail">Total distance</div>
-                                            </div>
-                                        </div>
-                                        <div id="bpm-stats">
-                                            <div id="stat-left">
-                                                <div class="icon"><i class="fa fa-bicycle" aria-hidden="true"></i></div>
-                                            </div>
-                                            <div id="stat-right">
-                                                <div class="value">281.4 <span class="small">km</span></div>
-                                                <div class="detail">Total distance</div>
-                                            </div>
-                                        </div>
-                                        <div id="speed-stats">
-                                            <div id="stat-left">
-                                                <div class="icon"><i class="fa fa-bicycle" aria-hidden="true"></i></div>
-                                            </div>
-                                            <div id="stat-right">
-                                                <div class="value">281.4 <span class="small">km</span></div>
-                                                <div class="detail">Total distance</div>
+                                            <div class="form-group">
+                                                <label for="confirm">Confirm Password:</label>
+                                                <input type="text" class="form-control" id="confirm">
                                             </div>
                                         </div>
                                     </div>
@@ -252,19 +131,196 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-4"> <!-- Calendar --> 
-                    <div class="panel-group" id="accordion2">
-                        <div class="panel-heading" id="cal">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-target="#calendar" href="#calendar">
-                                    Calendar
-                                </a>
-                            </h4>
+                    <div class="col-sm-4"> <!-- Connections -->
+                        <div class="panel-group connects" id="accordion2">
+                            <div class="panel-heading" id="connect">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-target="#collapseTwo" href="#collapseTwo">
+                                        Connections
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <div class="connections">
+                                        <ul class="soc" align="center">
+                                            <li><a class="soc-twitter" href="#"></a></li>
+                                            <li><a class="soc-facebook" href="#"></a></li>
+                                            <li><a class="soc-google" href="#"></a></li>
+                                            <li><a class="soc-pinterest" href="#"></a></li>
+                                            <li><a class="soc-linkedin" href="#"></a></li>
+                                            <li><a class="soc-rss soc-icon-last" href="#"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="sl-captions">
+                                        <h3>Get Cheered On!</h3>
+                                        <p>Post what you're doing so the people around knows.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div id="calendar" class="panel-collapse collapse in">
-                            <div class="panel-body">
-                                <div id="calendar"> </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4"> <!-- Food Diary -->
+                        <div class="panel-group food-diary" id="accordion2">
+                            <div class="panel-heading" id="fooddiary">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-target="#food-diary" href="#food-diary">
+                                        Food Diary
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="food-diary" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <div id="food-diary">
+                                        <nav id="food-diary-nav" class="navbar navbar-collapse navbar-light">
+                                            <ul class="nav nav-tabs">
+                                                <li>
+                                                    <a href="#today">Today</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#journal">Journal</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#report">Report</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#goals">Goals</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                        <div id="food-diary-contents">
+                                            <div id="today">
+                                                <nav id="food-diary-today-nav" class="navbar navbar-light">
+                                                    <ul class="nav nav-pills">
+                                                        <li>
+                                                            <a href="#breakfast">Breakfast</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#lunch">Lunch</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#dinner">Dinner</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#Snack">Snack</a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4"> <!-- Health Reports --> 
+                        <div class="health">
+                            <div class="panel-group" id="accordion2">
+                                <div class="panel-heading" id="health-report">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-target="#health" href="#health">
+                                            Health Report 
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="health" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <!-- Date Choices -->
+                                        <div class="date-choice">
+                                            <ul>
+                                                <li>
+                                                    <a href="#6months">6 months</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#4weeks">4 weeks</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#7days">7 Days</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#12months">12 months</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- Chart Display -->
+                                        <canvas id="myChart" width="400" height="400"></canvas>
+                                        <!-- Written Statistics -->
+                                        <div class="stats-wrapper">
+                                            <div id="cardio-stats">
+                                                <div id="stat-left">
+                                                    <div class="icon"><i class="fa fa-bicycle" aria-hidden="true"></i></div>
+                                                </div>
+                                                <div id="stat-right">
+                                                    <div class="value">281.4 <span class="small">km</span></div>
+                                                    <div class="detail">Total distance</div>
+                                                </div>
+                                            </div>
+                                            <div id="cal-stats">
+                                                <div id="stat-left">
+                                                    <div class="icon"><i class="fa fa-bicycle" aria-hidden="true"></i></div>
+                                                </div>
+                                                <div id="stat-right">
+                                                    <div class="value">281.4 <span class="small">km</span></div>
+                                                    <div class="detail">Total distance</div>
+                                                </div>
+                                            </div>
+                                            <div id="time-stats">
+                                                <div id="stat-left">
+                                                    <div class="icon"><i class="fa fa-bicycle" aria-hidden="true"></i></div>
+                                                </div>
+                                                <div id="stat-right">
+                                                    <div class="value">281.4 <span class="small">km</span></div>
+                                                    <div class="detail">Total distance</div>
+                                                </div>
+                                            </div>
+                                            <div id="pace-stats">
+                                                <div id="stat-left">
+                                                    <div class="icon"><i class="fa fa-bicycle" aria-hidden="true"></i></div>
+                                                </div>
+                                                <div id="stat-right">
+                                                    <div class="value">281.4 <span class="small">km</span></div>
+                                                    <div class="detail">Total distance</div>
+                                                </div>
+                                            </div>
+                                            <div id="bpm-stats">
+                                                <div id="stat-left">
+                                                    <div class="icon"><i class="fa fa-bicycle" aria-hidden="true"></i></div>
+                                                </div>
+                                                <div id="stat-right">
+                                                    <div class="value">281.4 <span class="small">km</span></div>
+                                                    <div class="detail">Total distance</div>
+                                                </div>
+                                            </div>
+                                            <div id="speed-stats">
+                                                <div id="stat-left">
+                                                    <div class="icon"><i class="fa fa-bicycle" aria-hidden="true"></i></div>
+                                                </div>
+                                                <div id="stat-right">
+                                                    <div class="value">281.4 <span class="small">km</span></div>
+                                                    <div class="detail">Total distance</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4"> <!-- Calendar --> 
+                        <div class="panel-group">
+                            <div class="panel-heading" id="cal">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-target="#calendar" href="#calendar">
+                                        Calendar
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="calendar" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <div id="calendar"> </div>
+                                </div>
                             </div>
                         </div>
                     </div>

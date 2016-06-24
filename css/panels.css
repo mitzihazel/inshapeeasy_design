@@ -6,6 +6,18 @@
 	.panel-group {
 		border-radius: 0px !important;
 		background-color: white;
+		margin-bottom: 0px !important;
+	}
+
+	/* Subscription panel-group */
+	div#subcribe {
+	    border-top-left-radius: 20px !important;
+	    border-top-right-radius: 20px !important;
+	}
+	/* Calendar */
+	div#cal {
+	    border-bottom-left-radius: 20px !important;
+	    border-bottom-right-radius: 20px !important;
 	}
 }
 
@@ -13,6 +25,15 @@
 	.panel-heading {
 		border-top-left-radius: 15px !important;
 	    border-top-right-radius: 15px !important;
+	}
+	.panel-group {
+		margin-bottom: 20px !important;
+	}
+
+	/* Calendar */
+	div#cal {
+	    border-bottom-left-radius: 0px !important;
+	    border-bottom-right-radius: 0px !important;
 	}
 }
 
@@ -41,8 +62,10 @@
 	padding: 0px !important;
 }
 
-.panel-group {
-    border-radius: 20px 20px !important;
-    background-color: white;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, .8);
+@media (min-width: 1200px) {
+	.panel-group {
+	    border-radius: 20px 20px !important;
+	    background-color: white;
+	    box-shadow: 0px 0px 20px rgba(0, 0, 0, .8);
+	}
 }
