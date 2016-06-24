@@ -18,6 +18,7 @@
         <script src="js/scripts.js"></script>
 
         <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -29,18 +30,35 @@
         <link rel="stylesheet" href="fullcalendar/fullcalendar.css">
         <link rel="stylesheet" href="fullcalendar/scheduler.css">
 
-        <!-- Chart -->
+        <!-- Chart JS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.min.js"></script>
 
+        <!-- Google Chart -->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
     </head>
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-sm-4"></div>
-                <div class="col-sm-4">
+                <div class="col-sm-4"> <!-- Subscription -->
+                    <div class="panel-group subscription" id="accordion2">
+                        <div class="panel-heading" id="subcribe">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-target="#subscription" href="#subscription">
+                                    Subscription
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="subscription" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <div id="subscription"> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4"> <!-- user Account -->
                     <div class="panel-group" id="accordion">
-                        <div class="panel-heading">
+                        <div class="panel-heading" id="user">
                             <h4 class="panel-title">
                                 <a data-toggle="collapse" data-target="#collapseOne" href="#collapseOne">
                                     Account
@@ -97,9 +115,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="panel-group" id="accordion2">
-                        <div class="panel-heading">
+                <div class="col-sm-4"> <!-- Connections -->
+                    <div class="panel-group connects" id="accordion2">
+                        <div class="panel-heading" id="connect">
                             <h4 class="panel-title">
                                 <a data-toggle="collapse" data-target="#collapseTwo" href="#collapseTwo">
                                     Connections
@@ -130,10 +148,10 @@
             <div class="row">
                 <div class="col-sm-4">
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4"> <!-- Health Reports --> 
                     <div class="health">
                         <div class="panel-group" id="accordion2">
-                            <div class="panel-heading">
+                            <div class="panel-heading" id="health-report">
                                 <h4 class="panel-title">
                                     <a data-toggle="collapse" data-target="#health" href="#health">
                                         Health Report 
@@ -142,15 +160,90 @@
                             </div>
                             <div id="health" class="panel-collapse collapse in">
                                 <div class="panel-body">
+                                    <!-- Date Choices -->
+                                    <div class="date-choice">
+                                        <ul>
+                                            <li>
+                                                <a href="#6months">6 months</a>
+                                            </li>
+                                            <li>
+                                                <a href="#4weeks">4 weeks</a>
+                                            </li>
+                                            <li>
+                                                <a href="#7days">7 Days</a>
+                                            </li>
+                                            <li>
+                                                <a href="#12months">12 months</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Chart Display -->
                                     <canvas id="myChart" width="400" height="400"></canvas>
+                                    <!-- Written Statistics -->
+                                    <div class="stats-wrapper">
+                                        <div id="cardio-stats">
+                                            <div id="stat-left">
+                                                <div class="icon"><i class="fa fa-bicycle" aria-hidden="true"></i></div>
+                                            </div>
+                                            <div id="stat-right">
+                                                <div class="value">281.4 <span class="small">km</span></div>
+                                                <div class="detail">Total distance</div>
+                                            </div>
+                                        </div>
+                                        <div id="cal-stats">
+                                            <div id="stat-left">
+                                                <div class="icon"><i class="fa fa-bicycle" aria-hidden="true"></i></div>
+                                            </div>
+                                            <div id="stat-right">
+                                                <div class="value">281.4 <span class="small">km</span></div>
+                                                <div class="detail">Total distance</div>
+                                            </div>
+                                        </div>
+                                        <div id="time-stats">
+                                            <div id="stat-left">
+                                                <div class="icon"><i class="fa fa-bicycle" aria-hidden="true"></i></div>
+                                            </div>
+                                            <div id="stat-right">
+                                                <div class="value">281.4 <span class="small">km</span></div>
+                                                <div class="detail">Total distance</div>
+                                            </div>
+                                        </div>
+                                        <div id="pace-stats">
+                                            <div id="stat-left">
+                                                <div class="icon"><i class="fa fa-bicycle" aria-hidden="true"></i></div>
+                                            </div>
+                                            <div id="stat-right">
+                                                <div class="value">281.4 <span class="small">km</span></div>
+                                                <div class="detail">Total distance</div>
+                                            </div>
+                                        </div>
+                                        <div id="bpm-stats">
+                                            <div id="stat-left">
+                                                <div class="icon"><i class="fa fa-bicycle" aria-hidden="true"></i></div>
+                                            </div>
+                                            <div id="stat-right">
+                                                <div class="value">281.4 <span class="small">km</span></div>
+                                                <div class="detail">Total distance</div>
+                                            </div>
+                                        </div>
+                                        <div id="speed-stats">
+                                            <div id="stat-left">
+                                                <div class="icon"><i class="fa fa-bicycle" aria-hidden="true"></i></div>
+                                            </div>
+                                            <div id="stat-right">
+                                                <div class="value">281.4 <span class="small">km</span></div>
+                                                <div class="detail">Total distance</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4"> <!-- Calendar --> 
                     <div class="panel-group" id="accordion2">
-                        <div class="panel-heading">
+                        <div class="panel-heading" id="cal">
                             <h4 class="panel-title">
                                 <a data-toggle="collapse" data-target="#calendar" href="#calendar">
                                     Calendar
@@ -165,7 +258,7 @@
                     </div>
                 </div>
             </div>
-            <script type="text/javascript">
+            <script type="text/javascript"> /* Calendar Js */
                 $(document).ready(function() {
 
                     // page is now ready, initialize the calendar...
@@ -176,23 +269,24 @@
 
                 });
             </script>
-            <!-- Charts configuration -->
-            <script>
-                var ctx = document.getElementById("myChart");
+
+            <!-- Charts js configuration -->
+            <script> /* Chart JS */ 
+                var ctx = document.getElementById("myChart").getContext("2d");
                 var myChart = new Chart(ctx, {
-                    type: 'pie',
+                    type: 'bar',
                     data: {
                         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
                         datasets: [{
                             label: '# of Votes',
                             data: [12, 19, 3, 5, 2, 3],
                             backgroundColor: [
-                                'rgba(255, 99, 132, 0.2)',
-                                'rgba(54, 162, 235, 0.2)',
-                                'rgba(255, 206, 86, 0.2)',
-                                'rgba(75, 192, 192, 0.2)',
-                                'rgba(153, 102, 255, 0.2)',
-                                'rgba(255, 159, 64, 0.2)'
+                                'rgba(255, 99, 132, 2)',
+                                'rgba(54, 162, 235, 2)',
+                                'rgba(255, 206, 86, 2)',
+                                'rgba(75, 192, 192, 2)',
+                                'rgba(153, 102, 255, 2)',
+                                'rgba(255, 159, 64, 2)'
                             ],
                             borderColor: [
                                 'rgba(255,99,132,1)',
@@ -202,20 +296,75 @@
                                 'rgba(153, 102, 255, 1)',
                                 'rgba(255, 159, 64, 1)'
                             ],
-                            borderWidth: 1
-                        }]
+                            borderWidth: 1,
+                            scaleFontColor: 'rgba(54, 162, 235, 1)'
+                        }],
                     },
                     options: {
                         scales: {
                             yAxes: [{
                                 ticks: {
-                                    beginAtZero:true
+                                    beginAtZero:true,
+                                    scaleFontColor: 'rgb(255, 99, 132)'
                                 }
                             }]
+                        },
+                        legend: {
+                            display: true,
+                            labels: {
+                                fontColor: 'rgb(255, 99, 132)'
+                            },
                         }
                     }
-                });
-                </script>
+                }); 
+            </script>
+
+            <!-- Google Chart -->
+            <script type="text/javascript">
+            /*
+                google.charts.load('current', {'packages':['line']});
+                google.charts.setOnLoadCallback(drawChart);
+
+                function drawChart() {
+
+                    var data = new google.visualization.DataTable();
+                    data.addColumn('number', 'Day');
+                    data.addColumn('number', 'Guardians of the Galaxy');
+                    data.addColumn('number', 'The Avengers');
+                    data.addColumn('number', 'Transformers: Age of Extinction');
+
+                    data.addRows([
+                        [1,  37.8, 80.8, 41.8],
+                        [2,  30.9, 69.5, 32.4],
+                        [3,  25.4,   57, 25.7],
+                        [4,  11.7, 18.8, 10.5],
+                        [5,  11.9, 17.6, 10.4],
+                        [6,   8.8, 13.6,  7.7],
+                        [7,   7.6, 12.3,  9.6],
+                        [8,  12.3, 29.2, 10.6],
+                        [9,  16.9, 42.9, 14.8],
+                        [10, 12.8, 30.9, 11.6],
+                        [11,  5.3,  7.9,  4.7],
+                        [12,  6.6,  8.4,  5.2],
+                        [13,  4.8,  6.3,  3.6],
+                        [14,  4.2,  6.2,  3.4]
+                    ]);
+
+                    var options = {
+                        chart: {
+                            title: 'Box Office Earnings in First Two Weeks of Opening',
+                            subtitle: 'in millions of dollars (USD)'
+                        },
+                        width: 900,
+                        height: 500
+                    };
+
+                    var chart = new google.charts.Line(document.getElementById('linechart_material'));
+
+                    chart.draw(data, options);
+                }
+            */
+            </script>
         </div>
     </body>
 </html>

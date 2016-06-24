@@ -44,45 +44,5 @@
 .panel-group {
     border-radius: 20px 20px !important;
     background-color: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .8);
 }
-
-/**
-* Custom Panel for Change Password
-*/
-div#changeP {
-    height: 80px;
-    width: 150px;
-    border-radius: 150px !important;
-    float: right;
-    margin-right: 10%;
-    box-shadow: 0px 10px 15px grey;
-    margin-bottom: 3em;
-}
-
-/**
-* Style for account user change password
-*/
-div#changePass {
-    padding: 30px;
-    margin-top: 5em;
-    font-size: large;
-    font-family: arial, sans-serif;
-    color: white;
-    background-color: #222;
-}
-
-#changePass > .panel-body {
-    padding: 15px;
-    height: 15em;
-    display: inline;
-}
-
-/* Form Groups in user Account */
-.form-group {
-	font-size: 20px;
-}
-
-.form-control {
-	height: 40px !important;
-}
-

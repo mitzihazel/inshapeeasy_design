@@ -1,3 +1,6 @@
+/**
+* User Account Designs.
+*/
 @media (min-width: 360px) {
 	body {
 		padding: 0px !important;
@@ -28,6 +31,10 @@ body {
 	margin: auto;
     position: relative;
     border: 2px solid white;
+    border-radius: 50%;
+    background-color: white;
+    border: 4px solid #fff;
+    box-shadow: 0 0px 10px 15px red;
 }
 
 .profile-image {
@@ -68,6 +75,53 @@ body {
 }
 
 /**
+* Custom Panel for Change Password
+*/
+div#changeP {
+    height: 80px;
+    width: 150px;
+    border-radius: 150px !important;
+    float: right;
+    margin-right: 10%;
+    box-shadow: 0px 10px 15px grey;
+    margin-bottom: 3em;
+}
+
+/**
+* Style for account user change password
+*/
+div#changePass {
+    padding: 30px;
+    margin-top: 5em;
+    font-size: large;
+    font-family: arial, sans-serif;
+    color: white;
+    background: rgba(240,47,23,1);
+	background: -moz-linear-gradient(left, rgba(240,47,23,1) 0%, rgba(240,47,23,1) 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(240,47,23,1)), color-stop(5%, rgba(240,47,23,1)), color-stop(39%, rgba(246,41,12,1)), color-stop(79%, rgba(241,111,92,1)), color-stop(100%, rgba(231,56,39,1)));
+	background: -webkit-linear-gradient(left, rgba(240,47,23,1) 0%, rgba(240,47,23,1) 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
+	background: -o-linear-gradient(left, rgba(240,47,23,1) 0%, rgba(240,47,23,1) 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
+	background: -ms-linear-gradient(left, rgba(240,47,23,1) 0%, rgba(240,47,23,1) 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
+	background: linear-gradient(to right, rgba(240,47,23,1) 0%, rgba(240,47,23,1) 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f02f17', endColorstr='#e73827', GradientType=1 );
+}
+
+#changePass > .panel-body {
+    padding: 15px;
+    height: 15em;
+    display: inline;
+}
+
+/* Form Groups in user Account */
+.form-group {
+	font-size: 20px;
+}
+
+.form-control {
+	height: 40px !important;
+}
+
+/**
 * Style for account user change password
 */
 /* Style the buttons that are used to open and close the accordion panel */
@@ -103,9 +157,13 @@ div.panel.show {
 /**
 * CONNECTIONS TAB DESIGN
 */
+
+div.connects 
+{
+	color: white;
+}
 .connections {
 	padding: 30px;
-	background-color: white;
 	border-radius: 10px 10px;	
 }
 
@@ -114,6 +172,9 @@ div.panel.show {
     top: 20px;
     text-align: center;
     padding: 50px;
+    background-color: rgba(240,47,23,1);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .sl-captions >  h3 {
@@ -127,7 +188,7 @@ div.panel.show {
 div#calendar {
     padding: 20px 0px -1px;
     background: rgba(240,47,23,1);
-    color: white;
+    color: black;
 }
 
 /* Buttons Arrangement in Desktop */
@@ -166,15 +227,15 @@ td.fc-day.fc-widget-content.fc-thu.fc-today.fc-state-highlight {
 
 /* Date name */
 .fc-toolbar .fc-left {
-    position: relative;
-    left: 30%;
+    display: inline-block;
+    float: none !important;
 }
 
 /**
 * Calendar table contents
 */
 .fc-row .fc-bg {
-   background-color: #222;
+   background-color: white; /* #222 almost black background color in theme. */
 }
 
 /* Calendar Borders */
@@ -187,9 +248,72 @@ td.fc-day.fc-widget-content.fc-thu.fc-today.fc-state-highlight {
 }
 
 /**
+* Style for the Current Day.
+*/
+
+.fc td.fc-today {
+    border-style: double;
+    background-color: rgba(54, 162, 235, 0.5);
+    color: black;
+    font-weight: bold;
+}
+
+/** HEALTH REPORTS **/
+
+/**
+* Date choices
+*/
+.date-choice ul {
+	list-style-type: none;
+    position: relative;
+    width: 100%;
+    right: 5%;
+}
+.date-choice li {
+    float: left;
+    margin-left: 5%;
+}
+.date-choice ul li a {
+    color: black !important; /*  rgba(255,99,132,1) -- PINK font color for labels. */
+    font-weight: bold;
+}
+
+/**
 * Style for the Charts
 */ 
 div#health {
-    padding: 30px 0px;
-    background-color: #222;
+    padding: 30px 0px 0px;
+    background-color: white;
+}
+
+/**
+* Written stats in Health Report style.
+*/
+.stats-wrapper {
+    padding: 50px;
+    background-color: rgba(240,47,23,1); /* Theme major color [ similar to red-orange. ]*/
+    margin-top: 20px;
+    height: 20em;
+    color: white;
+}
+
+#stat-left {
+	float: left;
+}
+
+#stat-right {
+	float: right;
+	margin-left: 10px;
+}
+
+div#cardio-stats, div#time-stats, div#bpm-stats {
+    position: relative;
+    float: left;
+    margin-top: 1em;
+}
+
+div#cal-stats, div#pace-stats, div#speed-stats {
+	position: relative;
+	float: right;
+	margin-top: 1em;
 }
