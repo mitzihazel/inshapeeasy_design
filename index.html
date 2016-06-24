@@ -192,6 +192,7 @@
                                         </nav>
                                         <div id="food-diary-contents">
                                             <div id="today">
+                                                <!-- naivgation in tab "Today" -->
                                                 <nav id="food-diary-today-nav" class="navbar navbar-light">
                                                     <ul class="nav nav-pills">
                                                         <li>
@@ -208,6 +209,15 @@
                                                         </li>
                                                     </ul>
                                                 </nav>
+                                                <!-- Captions in the tab Today -->
+                                                <div class="no-items-wrapper">
+                                                    <h3>Get started!</h3>
+                                                    <div class="description">Tap '+' to add an entry to your journal.</div>
+                                                    <a href="#" data-toggle="modal" data-target="#addFoodItem"><img src="/themes/custom/inshapeeasy1/images/eat-icon.png" alt="add food item"></a>
+                                                </div>
+
+                                                <!-- Button to modal -->
+                                                <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#addFoodItem" id="AddNewItem_bn"><i class="fa fa-plus"></i></a>
                                             </div>
                                         </div>
                                     </div>

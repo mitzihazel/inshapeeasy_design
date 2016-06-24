@@ -392,3 +392,20 @@ div#food-diary { /* Main wrapper */
 nav ul li { /* Nav tabs */
 	left: 5%;
 }
+
+/**
+* Food diary today captions content wrapper.
+*/
+.no-items-wrapper {
+    text-align: center;
+}
+
+/* Button for modal - to add new item in Food Diary. */
+.btn-danger {
+	float: right;
+	border-radius: 150px !important;
+    margin-right: 25px !important;
+    height: 40px !important;
+    width: 40px !important;
+    box-shadow: 1px 4px gray !important;
+}
