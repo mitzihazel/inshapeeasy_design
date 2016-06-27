@@ -10,14 +10,14 @@
 	}
 
 	/* Subscription panel-group */
-	div#subcribe {
-	    border-top-left-radius: 20px !important;
-	    border-top-right-radius: 20px !important;
-	}
-	/* Calendar */
-	div#cal {
+	div#health-report {
 	    border-bottom-left-radius: 20px !important;
 	    border-bottom-right-radius: 20px !important;
+	}
+	/* Calendar */
+	div#user {
+	    border-top-left-radius: 20px !important;
+	    border-top-right-radius: 20px !important;
 	}
 }
 
@@ -31,14 +31,20 @@
 	}
 
 	/* Calendar */
-	div#cal {
+	div#user {
+	    border-bottom-left-radius: 0px !important;
+	    border-bottom-right-radius: 0px !important;
+	}
+
+	/* Subscription panel-group */
+	div#health-report {
 	    border-bottom-left-radius: 0px !important;
 	    border-bottom-right-radius: 0px !important;
 	}
 }
 
 .panel-heading {
-	background: rgba(240,47,23,1);
+	background: #FF624A;
 	padding: 20px !important;
 }
 .panel-heading a {

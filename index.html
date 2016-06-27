@@ -44,35 +44,7 @@
         <div class="container">
             <div id="whole-wrapper">
                 <div class="row">
-                    <div class="col-sm-4"> <!-- Subscription -->
-                        <div class="panel-group subscription" id="accordion2">
-                            <div class="panel-heading" id="subcribe">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-target="#subscription" href="#subscription">
-                                        Subscription
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="subscription" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <div id="subscript">
-                                        <form>
-                                            <div class="form-left">
-                                                <fieldset class="form-group">
-                                                    <label for="exampleInputEmail1">Subscribe</label>
-                                                    <input type="text" class="form-control" id="subscribe" placeholder="Enter here..">
-                                                </fieldset>
-                                            </div>
-                                            <div class="form-right">
-                                                <button type="submit" class="btn btn-primary">Submit</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4"> <!-- user Account -->
+                    <div class="col-md-4"> <!-- user Account -->
                         <div class="panel-group" id="accordion">
                             <div class="panel-heading" id="user">
                                 <h4 class="panel-title">
@@ -129,9 +101,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4"> <!-- Connections -->
+                        </div> <!-- Connections -->
                         <div class="panel-group connects" id="accordion2">
                             <div class="panel-heading" id="connect">
                                 <h4 class="panel-title">
@@ -158,11 +128,23 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> 
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4"> <!-- Food Diary -->
+                    <div class="col-md-4"> <!-- Calendar --> 
+                        <div class="panel-group">
+                            <div class="panel-heading" id="cal">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-target="#calendar" href="#calendar">
+                                        Calendar
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="calendar" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <div id="calendar"> </div>
+                                </div>
+                            </div>
+                        </div>  <!-- Food Diary -->
                         <div class="panel-group food-diary" id="accordion2">
                             <div class="panel-heading" id="fooddiary">
                                 <h4 class="panel-title">
@@ -192,20 +174,24 @@
                                         </nav>
                                         <div id="food-diary-contents">
                                             <div id="today">
-                                                <!-- naivgation in tab "Today" -->
+                                                <!-- navigation in tab "Today" -->
                                                 <nav id="food-diary-today-nav" class="navbar navbar-light">
                                                     <ul class="nav nav-pills">
                                                         <li>
                                                             <a href="#breakfast">Breakfast</a>
+                                                            <span class="total-cal">251 cal</span>
                                                         </li>
                                                         <li>
                                                             <a href="#lunch">Lunch</a>
+                                                            <span class="total-cal">251 cal</span>
                                                         </li>
                                                         <li>
                                                             <a href="#dinner">Dinner</a>
+                                                            <span class="total-cal">251 cal</span>
                                                         </li>
                                                         <li>
                                                             <a href="#Snack">Snack</a>
+                                                            <span class="total-cal">251 cal</span>
                                                         </li>
                                                     </ul>
                                                 </nav>
@@ -213,11 +199,77 @@
                                                 <div class="no-items-wrapper">
                                                     <h3>Get started!</h3>
                                                     <div class="description">Tap '+' to add an entry to your journal.</div>
-                                                    <a href="#" data-toggle="modal" data-target="#addFoodItem"><img src="/themes/custom/inshapeeasy1/images/eat-icon.png" alt="add food item"></a>
+                                                    <a href="#" data-toggle="modal" data-target="#addFoodItem"><img src="images/eat-icon.png" alt="add food item"></a>
                                                 </div>
 
                                                 <!-- Button to modal -->
                                                 <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#addFoodItem" id="AddNewItem_bn"><i class="fa fa-plus"></i></a>
+                                            </div>
+                                            <div id="journal">
+                                                <div class="well">
+                                                    <h3 class="ng-binding">Monday</h3>
+                                                    <div class="date ng-binding">6/27/2016</div>
+                                                    <div class="journal-info">
+                                                        <!-- Chart Display -->
+                                                        <canvas id="journal-items" width="200" height="200"></canvas>
+                                                    </div>
+
+                                                    <div class="meal-time">
+                                                      <a href=""><div id="breakmeal"></div></a>
+                                                      <label id="bf-label">Breakfast</label>
+
+                                                      <div id="item-list">
+                                                        <ul>
+                                                          <!-- ngRepeat: item in items | filter: filterBreakfastItems -->
+                                                        </ul>
+                                                      </div>
+
+
+                                                    </div>
+
+                                                    <div class="meal-time">
+                                                      <a href=""><div id="lunchmeal"></div></a>
+                                                      <label id="lunch-label">Lunch</label>
+
+                                                      <div id="item-list">
+                                                        <ul>
+                                                          <!-- ngRepeat: item in items | filter: filterLunchItems -->
+                                                        </ul>
+                                                      </div>
+
+                                                    </div>
+
+                                                    <div class="meal-time">
+                                                      <a href=""><div id="dinnermeal"></div></a>
+                                                      <label id="dinner-label">Dinner</label>
+
+                                                      <div id="item-list">
+                                                        <ul>
+                                                          <!-- ngRepeat: item in items | filter: filterDinnerItems -->
+                                                        </ul>
+                                                      </div>
+                                                    </div>
+
+                                                    <div class="meal-time">
+                                                      <a href=""><div id="snackmeal"></div></a>
+                                                      <label id="snack-label">Snack</label>
+
+                                                      <div id="item-list">
+                                                        <ul>
+                                                          <!-- ngRepeat: item in items | filter: filterSnackItems -->
+                                                        </ul>
+                                                      </div>
+                                                    </div>
+
+                                                    </div>
+                                            </div>
+                                            <div id="food-report">
+                                                <canvas id="fd-report" width="200" height="200"></canvas>
+                                                <!-- Report Details -->
+                                                <div class="report-details">
+                                                    <p>Weight Change</p>
+                                                    <h1>-5</h1><small>(lb)</small>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -225,7 +277,34 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4"> <!-- Health Reports --> 
+                    <div class="col-md-4"> <!-- Subscription -->
+                        <div class="panel-group subscription" id="accordion2">
+                            <div class="panel-heading" id="subcribe">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-target="#subscription" href="#subscription">
+                                        Subscription
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="subscription" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <div id="subscript">
+                                        <form>
+                                            <div class="form-left">
+                                                <fieldset class="form-group">
+                                                    <label for="exampleInputEmail1">Subscribe</label>
+                                                    <input type="text" class="form-control" id="subscribe" placeholder="Enter here..">
+                                                </fieldset>
+                                            </div>
+                                            <div class="form-right">
+                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                        <!-- Health Reports --> 
                         <div class="health">
                             <div class="panel-group" id="accordion2">
                                 <div class="panel-heading" id="health-report">
@@ -256,6 +335,7 @@
                                         </div>
                                         <!-- Chart Display -->
                                         <canvas id="myChart" width="400" height="400"></canvas>
+
                                         <!-- Written Statistics -->
                                         <div class="stats-wrapper">
                                             <div id="cardio-stats">
@@ -318,22 +398,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4"> <!-- Calendar --> 
-                        <div class="panel-group">
-                            <div class="panel-heading" id="cal">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-target="#calendar" href="#calendar">
-                                        Calendar
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="calendar" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <div id="calendar"> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <script type="text/javascript"> /* Calendar Js */
@@ -349,7 +413,7 @@
             </script>
 
             <!-- Charts js configuration -->
-            <script> /* Chart JS */ 
+            <script> /* Chart JS for Health Report*/ 
                 var ctx = document.getElementById("myChart").getContext("2d");
                 var myChart = new Chart(ctx, {
                     type: 'bar',
@@ -392,6 +456,96 @@
                             labels: {
                                 fontColor: 'rgb(0, 0, 0)'
                             },
+                        }
+                    }
+                }); 
+            </script>
+
+            <script> /* Chart JS for Food Diary Journal */ 
+                var ctx = document.getElementById("journal-items");
+                var myChart = new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        labels: ["Calories", "Fat", "Protien", "Cabs"],
+                        datasets: [{
+                            label: 'Exercises Statistics',
+                            data: [12, 19, 3, 5],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.5)',
+                                'rgba(54, 162, 235, 0.5)',
+                                'rgba(255, 206, 86, 0.5)',
+                                'rgba(75, 192, 192, 0.5)'
+                            ],
+                            borderColor: [
+                                'rgba(255 ,99, 132, 3)',
+                                'rgba(54, 162, 235, 3)',
+                                'rgba(255, 206, 86, 3)',
+                                'rgba(75, 192, 192, 3)'
+                            ],
+                            borderWidth: 1,
+                            scaleFontColor: 'rgba(54, 162, 235, 1)'
+                        }],
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero:true,
+                                    display: false
+                                },
+                                gridLines : {
+                                    display : false,
+                                    lineWidth: 0,
+                                }
+                            }]
+                        },
+                        legend: {
+                            display: true
+                        }
+                    }
+                }); 
+            </script>
+
+            <script> /* Chart JS for Food Diary Report */ 
+                var ctx = document.getElementById("fd-report");
+                var myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ["6/27", "6/28", "6/29", "6/30", "7/01"],
+                        datasets: [{
+                            label: 'June 27 - July 01, 2016',
+                            data: [140, 230, 120, 350, 250],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.5)',
+                            ],
+                            borderColor: [
+                                'rgba(255 ,99, 132, 3)',
+                            ],
+                            borderWidth: 2,
+                            scaleFontColor: 'rgba(54, 162, 235, 1)'
+                        }],
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero:120,
+                                    display: true
+                                },
+                                gridLines : {
+                                    display : false,
+                                    lineWidth: 0
+                                }
+                            }],
+                            xAxes: [{
+                                gridLines : {
+                                    display : false,
+                                    lineWidth: 0,
+                                }
+                            }]
+                        },
+                        legend: {
+                            display: true
                         }
                     }
                 }); 

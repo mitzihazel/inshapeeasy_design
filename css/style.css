@@ -16,6 +16,7 @@ body {
 	padding: 50px;
 	background-color: whitesmoke !important;
 	overflow-x: hidden; 
+    font-family: 'Roboto', sans-serif !important;
 }
 .container {
 	padding-right: 0px !important;
@@ -43,15 +44,15 @@ body {
 }
 
 .profile-image {
-	padding: 100px 100px 50px;
-	background: rgba(240,47,23,1);
-	background: -moz-linear-gradient(left, rgba(240,47,23,1) 0%, rgba(240,47,23,1) 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
-	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(240,47,23,1)), color-stop(5%, rgba(240,47,23,1)), color-stop(39%, rgba(246,41,12,1)), color-stop(79%, rgba(241,111,92,1)), color-stop(100%, rgba(231,56,39,1)));
-	background: -webkit-linear-gradient(left, rgba(240,47,23,1) 0%, rgba(240,47,23,1) 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
-	background: -o-linear-gradient(left, rgba(240,47,23,1) 0%, rgba(240,47,23,1) 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
-	background: -ms-linear-gradient(left, rgba(240,47,23,1) 0%, rgba(240,47,23,1) 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
-	background: linear-gradient(to right, rgba(240,47,23,1) 0%, rgba(240,47,23,1) 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f02f17', endColorstr='#e73827', GradientType=1 );
+	padding: 60px 100px 50px;
+	background: #FF624A;
+	/*background: -moz-linear-gradient(left, #FF624A 0%, #FF624A 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, #FF624A), color-stop(5%, #FF624A), color-stop(39%, rgba(246,41,12,1)), color-stop(79%, rgba(241,111,92,1)), color-stop(100%, rgba(231,56,39,1)));
+	background: -webkit-linear-gradient(left, #FF624A 0%, #FF624A 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
+	background: -o-linear-gradient(left, #FF624A 0%, #FF624A 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
+	background: -ms-linear-gradient(left, #FF624A 0%, #FF624A 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
+	background: linear-gradient(to right, #FF624A 0%, #FF624A 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f02f17', endColorstr='#e73827', GradientType=1 ); */
 }
 
 #name {
@@ -109,14 +110,14 @@ div#changePass {
     font-size: large;
     font-family: arial, sans-serif;
     color: white;
-    background: rgba(240,47,23,1);
-	background: -moz-linear-gradient(left, rgba(240,47,23,1) 0%, rgba(240,47,23,1) 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
-	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(240,47,23,1)), color-stop(5%, rgba(240,47,23,1)), color-stop(39%, rgba(246,41,12,1)), color-stop(79%, rgba(241,111,92,1)), color-stop(100%, rgba(231,56,39,1)));
-	background: -webkit-linear-gradient(left, rgba(240,47,23,1) 0%, rgba(240,47,23,1) 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
-	background: -o-linear-gradient(left, rgba(240,47,23,1) 0%, rgba(240,47,23,1) 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
-	background: -ms-linear-gradient(left, rgba(240,47,23,1) 0%, rgba(240,47,23,1) 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
-	background: linear-gradient(to right, rgba(240,47,23,1) 0%, rgba(240,47,23,1) 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f02f17', endColorstr='#e73827', GradientType=1 );
+    background: #FF624A;
+	/*background: -moz-linear-gradient(left, #FF624A 0%, #FF624A 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, #FF624A), color-stop(5%, #FF624A), color-stop(39%, rgba(246,41,12,1)), color-stop(79%, rgba(241,111,92,1)), color-stop(100%, rgba(231,56,39,1)));
+	background: -webkit-linear-gradient(left, #FF624A 0%, #FF624A 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
+	background: -o-linear-gradient(left, #FF624A 0%, #FF624A 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
+	background: -ms-linear-gradient(left, #FF624A 0%, #FF624A 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
+	background: linear-gradient(to right, #FF624A 0%, #FF624A 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f02f17', endColorstr='#e73827', GradientType=1 ); */
 }
 
 #changePass > .panel-body {
@@ -139,7 +140,7 @@ div#changePass {
 */
 /* Style the buttons that are used to open and close the accordion panel */
 button.accordion {
-    background-color: rgba(240,47,23,1);
+    background-color: #FF624A;
     color: #444;
     cursor: pointer;
     padding: 18px;
@@ -187,13 +188,13 @@ div.connects
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     background: rgba(248,80,50,1);
-	background: -moz-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(231,56,39,0.99) 9%, rgba(246,41,12,0.93) 43%, rgba(240,47,23,0.88) 74%, rgba(241,111,92,0.84) 100%);
+	/*background: -moz-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(231,56,39,0.99) 9%, rgba(246,41,12,0.93) 43%, rgba(240,47,23,0.88) 74%, rgba(241,111,92,0.84) 100%);
 	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(248,80,50,1)), color-stop(9%, rgba(231,56,39,0.99)), color-stop(43%, rgba(246,41,12,0.93)), color-stop(74%, rgba(240,47,23,0.88)), color-stop(100%, rgba(241,111,92,0.84)));
 	background: -webkit-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(231,56,39,0.99) 9%, rgba(246,41,12,0.93) 43%, rgba(240,47,23,0.88) 74%, rgba(241,111,92,0.84) 100%);
 	background: -o-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(231,56,39,0.99) 9%, rgba(246,41,12,0.93) 43%, rgba(240,47,23,0.88) 74%, rgba(241,111,92,0.84) 100%);
 	background: -ms-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(231,56,39,0.99) 9%, rgba(246,41,12,0.93) 43%, rgba(240,47,23,0.88) 74%, rgba(241,111,92,0.84) 100%);
 	background: linear-gradient(to right, rgba(248,80,50,1) 0%, rgba(231,56,39,0.99) 9%, rgba(246,41,12,0.93) 43%, rgba(240,47,23,0.88) 74%, rgba(241,111,92,0.84) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#f16f5c', GradientType=1 );
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#f16f5c', GradientType=1 );*/
 }
 
 .sl-captions >  h3 {
@@ -206,7 +207,7 @@ div.connects
 */
 div#calendar {
     padding: 20px 0px -1px;
-    background: rgba(240,47,23,1);
+    background: #FF624A;
     color: black;
 }
 
@@ -234,7 +235,7 @@ button.fc-today-button.fc-button.fc-state-default.fc-corner-left.fc-corner-right
 
 /* Date Today highlighted */
 td.fc-day.fc-widget-content.fc-thu.fc-today.fc-state-highlight {
-	background: rgba(240,47,23,1);
+	background: #FF624A;
 }
 
 /* Calenday Scroll */
@@ -248,6 +249,26 @@ td.fc-day.fc-widget-content.fc-thu.fc-today.fc-state-highlight {
 .fc-toolbar .fc-left {
     display: inline-block;
     float: none !important;
+}
+
+/**
+* Changing the Color for the Month name in calendar.
+*/
+.fc-left > h2 {
+    color: white;
+    font-weight: bold;
+}
+
+/* Special color of the Sunday and Saturday in calendar. */
+th.fc-day-header.fc-widget-header.fc-sun,
+th.fc-day-header.fc-widget-header.fc-sat {
+    color: red;
+}
+
+th.fc-day-header.fc-widget-header {
+    color: white;
+    font-size: large;
+    font-weight: normal;
 }
 
 /**
@@ -310,17 +331,17 @@ div#health {
 */
 .stats-wrapper {
     padding: 50px;
-   	background-color: rgba(240,47,23,1);  /* Theme major color [ similar to red-orange. ]*/
+   	background-color: #FF624A;  /* Theme major color [ similar to red-orange. ]*/
     margin-top: 20px;
     height: 20em;
     color: white;
 	/*background: rgba(248,80,50,1);
-	background: -moz-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(231,56,39,1) 9%, rgba(240,47,23,1) 61%, rgba(246,41,12,1) 89%, rgba(241,111,92,1) 100%);
-	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(248,80,50,1)), color-stop(9%, rgba(231,56,39,1)), color-stop(61%, rgba(240,47,23,1)), color-stop(89%, rgba(246,41,12,1)), color-stop(100%, rgba(241,111,92,1)));
-	background: -webkit-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(231,56,39,1) 9%, rgba(240,47,23,1) 61%, rgba(246,41,12,1) 89%, rgba(241,111,92,1) 100%);
-	background: -o-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(231,56,39,1) 9%, rgba(240,47,23,1) 61%, rgba(246,41,12,1) 89%, rgba(241,111,92,1) 100%);
-	background: -ms-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(231,56,39,1) 9%, rgba(240,47,23,1) 61%, rgba(246,41,12,1) 89%, rgba(241,111,92,1) 100%);
-	background: linear-gradient(to right, rgba(248,80,50,1) 0%, rgba(231,56,39,1) 9%, rgba(240,47,23,1) 61%, rgba(246,41,12,1) 89%, rgba(241,111,92,1) 100%);
+	background: -moz-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(231,56,39,1) 9%, #FF624A 61%, rgba(246,41,12,1) 89%, rgba(241,111,92,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(248,80,50,1)), color-stop(9%, rgba(231,56,39,1)), color-stop(61%, #FF624A), color-stop(89%, rgba(246,41,12,1)), color-stop(100%, rgba(241,111,92,1)));
+	background: -webkit-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(231,56,39,1) 9%, #FF624A 61%, rgba(246,41,12,1) 89%, rgba(241,111,92,1) 100%);
+	background: -o-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(231,56,39,1) 9%, #FF624A 61%, rgba(246,41,12,1) 89%, rgba(241,111,92,1) 100%);
+	background: -ms-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(231,56,39,1) 9%, #FF624A 61%, rgba(246,41,12,1) 89%, rgba(241,111,92,1) 100%);
+	background: linear-gradient(to right, rgba(248,80,50,1) 0%, rgba(231,56,39,1) 9%, #FF624A 61%, rgba(246,41,12,1) 89%, rgba(241,111,92,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#f16f5c', GradientType=1 );*/
 }
 
@@ -374,7 +395,7 @@ div#cal-stats, div#pace-stats, div#speed-stats {
 
 button.btn.btn-primary {
     margin-top: 2.3em;
-    background-color: rgba(240,47,23,1);
+    background-color: #FF624A;
     border-color: red;
 }
 
@@ -386,11 +407,61 @@ button.btn.btn-primary {
 * Food Diary Styles.
 */
 div#food-diary { /* Main wrapper */
-    padding: 15px 2px;
+    padding: 15px 0px;
 }
 
 nav ul li { /* Nav tabs */
 	left: 5%;
+}
+
+nav#food-diary-today-nav {
+    border-radius: 0px !important;
+}
+
+ul.nav.nav-pills {
+    width: 100%;
+    right: 0;
+    background-color: #FF624A;
+}
+
+nav#food-diary-today-nav > ul > li {
+    width: 100%;
+    left: 0 !important;
+    border: 1px solid white;
+    margin-bottom: 1px;
+    padding: 5px;
+}
+
+nav#food-diary-today-nav > ul > li > a {
+    color: white !important;
+    text-transform: uppercase;
+}
+
+.nav-pills>li+li {
+    margin-left: 0px !important;
+}
+
+span.total-cal {
+    float: right;
+    margin-top: -2em;
+    color: white;
+    font-size: inherit;
+    margin-right: 5%;
+}
+
+/**
+* Canvas sizes in food diary.
+*/
+#journal canvas {
+    width: 350px !important;
+    height: 350px !important;
+    margin: 25px 0px 25px -15px;
+}
+
+/* Background color for the journal in Food Diary. */
+.well {
+    background-color: #FFE2CA !important;
+    font-weight: bolder;
 }
 
 /**
@@ -407,5 +478,132 @@ nav ul li { /* Nav tabs */
     margin-right: 25px !important;
     height: 40px !important;
     width: 40px !important;
-    box-shadow: 1px 4px gray !important;
+    box-shadow: 1px 4px 10px gray !important;
+    background-color: #FF624A !important;
+    border-color: white !important;
+}
+
+/**
+* Custom Meal buttons in the Journal Food diary.
+*/
+div#breakmeal {
+    width: 50px;
+    height: 50px;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    background: url(../images/breakfast.png) no-repeat;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    background-position: 50% 50%;
+    background-size: cover;
+    position: relative;
+    float: left;
+    margin-left: 11%;
+}
+div#lunchmeal {
+    width: 50px;
+    height: 50px;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    background: url(../images/lunch.png) no-repeat;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    background-position: 50% 50%;
+    background-size: cover;
+    position: relative;
+    float: left;
+    margin-left: 5%;
+}
+div#dinnermeal {
+    width: 50px;
+    height: 50px;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    background: url(../images/dinner1.png) no-repeat;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    background-position: 50% 50%;
+    background-size: cover;
+    position: relative;
+    float: left;
+    margin-left: 5%;
+}
+div#snackmeal {
+    width: 50px;
+    height: 50px;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    background: url(../images/snack.png) no-repeat;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    background-position: 50% 50%;
+    background-size: cover;
+    position: relative;
+    float: left;
+    margin-left: 5%;
+}
+
+/* Hide the labels in the meal time buttons. */
+.meal-time > label {
+    display: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: white;
+    text-transform: uppercase;
+    margin: auto;
+    position: absolute;
+    font-size: 2rem;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-shadow: 0px 1px 15px black;
+}
+
+/* Button Labels */
+#bf-label {
+    top: 95%;
+    left: 25%;
+}
+
+#lunch-label {
+    top: 95%;
+    left: 41%;   
+}
+
+#dinner-label {
+    top: 95%;
+    left: 58%;
+}
+
+#snack-label {
+    top: 95%;
+    left:74%;
+}
+
+/**
+* Food diary Report.
+*/
+div#food-report {
+    background-color: #FFFBE3;
+}
+
+.report-details {
+    margin-top: 2em;
+}
+.report-details > p, .report-details > h1 {
+    text-align: center;
+    color: #CC1800;
+}
+.report-details small {
+    color: #CC1800;
+    float: right;
+    margin-top: -2.5em;
+    margin-right: 10%;
 }
