@@ -72,5 +72,14 @@ $(document).ready(function(){
     	$('label#snack-label').css('display','none');
     });
 
+    /**
+    * JQuery Script for the Food Diary, when adding a new nutrient for the goal.
+    */
+    $("a.nut-choices").click(function(e) {
+        var nutrient_name = $(this).attr('name');
+        var text_input = $('form#goal-form input[type=text]');
+        $('<div class="form-group"><label for="'+nutrient_name+'">'+nutrient_name+'</label><input type="text" class="form-control" id="'+nutrient_name+'"></div>').insertAfter('form#goal-form input[type=text]:eq('+(text_input.length - 1)+')').focus();
+        e.preventDefault();
 
+    });
 }); 

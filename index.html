@@ -216,7 +216,7 @@
                                                             </div>
 
                                                             <!-- Modal Content -->
-                                                            <div class="container">
+                                                            <div class="container" id="modal-form-add-item">
                                                             <form class="col-md-6">
 
                                                                 <fieldset class="form-group">
@@ -232,14 +232,14 @@
                                                                 <fieldset class="form-group">
                                                                     <legend>Serving</legend>
 
-                                                                    <fieldset class="form-group">
+                                                                    <fieldset class="form-group col-md-6">
                                                                         <label for="servingPortion">Portion</label>
-                                                                        <input type="text" id="servingPortion" ng-model="item.portion">
+                                                                        <input type="text" id="servingPortion" ng-model="item.portion" class="form-control">
                                                                     </fieldset>
 
-                                                                    <fieldset class="form-group">
+                                                                    <fieldset class="form-group col-md-6">
                                                                         <label for="servingWeight">Weight (g)</label>
-                                                                        <input type="text" id="servingWeight" ng-model="item.weight">
+                                                                        <input type="text" id="servingWeight" ng-model="item.weight" class="form-control">
                                                                     </fieldset>
 
                                                                 </fieldset>
@@ -341,7 +341,6 @@
                                                     </div>
                                             </div> <!-- End of Food Diary Journal tab. -->
 
-
                                             <!-- Start of Food Diary Report tab. -->
                                             <div id="food-report">
                                                 <canvas id="fd-report" width="200" height="200"></canvas>
@@ -379,6 +378,42 @@
                                                     <!-- Button to modal -->
                                                     <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#addGoal" id="addGoalBtn"><i class="fa fa-plus"></i></a>
                                                 </form>
+
+                                                <!-- Modal form for Adding new Nutrient in the Goal tab. -->
+                                                <div id="addGoal" class="modal fade" role="dialog">
+                                                  <div class="modal-dialog">
+
+                                                    <!-- Modal content-->
+                                                    <div class="modal-content">
+                                                      <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title">Add Nutrient</h4>
+                                                      </div>
+                                                      <div class="modal-body">
+                                                        <div id="nutrient-choices">
+                                                            <ul class="nav nav-pills">
+                                                                <li>
+                                                                    <a name="Protein" class="nut-choices">Protein</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a name="Calcium" class="nut-choices">Calcium</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a name="Zinc" class="nut-choices">Zinc</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a name="Vitamin C" class="nut-choices">Vitamin C</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                      </div>
+                                                      <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                      </div>
+                                                    </div>
+
+                                                  </div>
+                                                </div>
                                             </div> <!-- End of Food Diary Goals tab. -->
                                         </div>
                                     </div>

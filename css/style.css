@@ -424,7 +424,12 @@ ul.nav.nav-pills {
     background-color: #FF624A;
 }
 
-nav#food-diary-today-nav > ul > li {
+/**
+* Styles for Navigation in today tab
+* and in the modal when adding new nutrition goal.
+*/
+
+nav#food-diary-today-nav > ul > li, div#nutrient-choices > ul > li {
     width: 100%;
     left: 0 !important;
     border: 1px solid white;
@@ -432,7 +437,7 @@ nav#food-diary-today-nav > ul > li {
     padding: 5px;
 }
 
-nav#food-diary-today-nav > ul > li > a {
+nav#food-diary-today-nav > ul > li > a, div#nutrient-choices > ul > li > a {
     color: white !important;
     text-transform: uppercase;
 }
@@ -628,7 +633,7 @@ form#goal-form {
     font-size: initial;
 }
 
-div#goals .btn-default {
+div#goals .btn-default, div#modal-form-add-item .btn-info {
     color: white;
     background-color: #FF624A;
     border-color: red;
@@ -636,4 +641,35 @@ div#goals .btn-default {
 
 .btn {
     padding: 9px 12px !important; 
+}
+
+/**
+* Food Diary form for adding new items styles.
+*/
+div#modal-form-add-item {
+    padding: 10px !important;
+    font-style: italic;
+}
+.modal-content {
+    color: grey !important;
+}
+
+div#modal-form-add-item legend {
+    font-size: 25px !important;
+    text-align: center;
+    font-weight: bolder;
+    font-style: normal !important;
+}
+
+div#addFoodItem .modal-header {
+    border-bottom: 2px solid red;
+    background-color: #FF624A !important;
+    color: white;
+}
+
+div#addFoodItem .modal-header .close {
+    text-shadow: 0 1px 5px #fff;
+    filter: alpha(opacity=20);
+    opacity: 3.2;
+    color: white;
 }
