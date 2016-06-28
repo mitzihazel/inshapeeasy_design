@@ -2,20 +2,29 @@ $(document).ready(function(){
 	/**
 	* Food Diary Custom JQuery functions.
 	*/
-    $('a[href="#today"]').click(function () {
+    $('a[href="#todays"]').click(function () {
       	$("div#today").show();
       	$("div#journal").hide();
       	$("div#food-report").hide();
+        $("div#goals").hide();
     });
-    $('a[href="#journal"]').click(function () {
+    $('a[href="#journals"]').click(function () {
       	$("div#today").hide();
 	    $("div#journal").show();
       	$("div#food-report").hide();
+        $("div#goals").hide();
     });
-    $('a[href="#report"]').click(function () {
+    $('a[href="#reports"]').click(function () {
       	$("div#today").hide();
 	    $("div#journal").hide();
       	$("div#food-report").show();
+        $("div#goals").hide();
+    });
+    $('a[href="#goal"]').click(function () {
+        $("div#today").hide();
+        $("div#journal").hide();
+        $("div#food-report").hide();
+        $("div#goals").show();
     });
 
 

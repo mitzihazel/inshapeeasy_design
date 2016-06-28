@@ -67,11 +67,11 @@
 
                                     <!-- Detailed info of the user -->
                                     <div class="profile-details">
-                                        <h4 id="title">Email</h4>
-                                        <h3 id="info">mitzi.bootyard@gmail.com</h3>
+                                        <h5 id="title">Email</h5>
+                                        <h4 id="info">mitzi.bootyard@gmail.com</h4>
                                         <hr>
-                                        <h4 id="title">Username</h4>
-                                        <h3 id="info">admin</h3>
+                                        <h5 id="title">Username</h5>
+                                        <h4 id="info">admin</h4>
                                         <hr>
                                     </div>
 
@@ -159,16 +159,16 @@
                                         <nav id="food-diary-nav" class="navbar navbar-collapse navbar-light">
                                             <ul class="nav nav-tabs">
                                                 <li>
-                                                    <a href="#today">Today</a>
+                                                    <a href="#todays">Today</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#journal">Journal</a>
+                                                    <a href="#journals">Journal</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#report">Report</a>
+                                                    <a href="#reports">Report</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#goals">Goals</a>
+                                                    <a href="#goal">Goals</a>
                                                 </li>
                                             </ul>
                                         </nav>
@@ -204,7 +204,84 @@
 
                                                 <!-- Button to modal -->
                                                 <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#addFoodItem" id="AddNewItem_bn"><i class="fa fa-plus"></i></a>
-                                            </div>
+
+                                                <!-- Start of Modal for add Item. -->
+                                                <div id="addFoodItem" class="modal" role="dialog">
+                                                    <div class="modal-dialog">
+
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                            <h4 class="modal-title">Food Info</h4>
+                                                            </div>
+
+                                                            <!-- Modal Content -->
+                                                            <div class="container">
+                                                            <form class="col-md-6">
+
+                                                                <fieldset class="form-group">
+                                                                    <label for="foodItemName">Name</label>
+                                                                    <input id="foodItemName" type="text" placeholder="Name" ng-model="item.name" class="form-control">
+                                                                </fieldset>
+
+                                                                <fieldset class="form-group">
+                                                                    <label for="foodItemDate">Date</label>
+                                                                    <input id="foodItemDate" ng-model="item.date" type="text" class="form-control">
+                                                                </fieldset>
+
+                                                                <fieldset class="form-group">
+                                                                    <legend>Serving</legend>
+
+                                                                    <fieldset class="form-group">
+                                                                        <label for="servingPortion">Portion</label>
+                                                                        <input type="text" id="servingPortion" ng-model="item.portion">
+                                                                    </fieldset>
+
+                                                                    <fieldset class="form-group">
+                                                                        <label for="servingWeight">Weight (g)</label>
+                                                                        <input type="text" id="servingWeight" ng-model="item.weight">
+                                                                    </fieldset>
+
+                                                                </fieldset>
+
+
+                                                                <fieldset class="form-group">
+                                                                    <legend>Nutrition </legend>
+
+                                                                    <fieldset class="form-group">
+                                                                        <label for="foodItemCalories">Calories</label>
+                                                                        <input id="foodItemCalories" type="text" ng-model="item.calories" class="form-control">
+                                                                    </fieldset>
+
+                                                                    <fieldset class="form-group">
+                                                                        <label for="foodItemFat">Total fat (gram)</label>
+                                                                        <input id="foodItemFat" type="text" ng-model="item.fat" class="form-control">
+                                                                    </fieldset>
+
+                                                                    <fieldset class="form-group">
+                                                                        <label for="foodItemCarbs">Carbs (gram)</label>
+                                                                        <input id="foodItemCarbs" type="text" ng-model="item.carbs" class="form-control">
+                                                                    </fieldset>
+
+                                                                    <fieldset class="form-group">
+                                                                        <label for="foodItemProtein">Protein</label>
+                                                                        <input id="foodItemProtein" type="text" ng-model="item.protein" class="form-control">
+                                                                    </fieldset>
+                                                            </fieldset>
+                                                            <fieldset class="form-group">
+                                                                <button class="btn btn-info pull-right" ng-click="submitNewFoodItem()" data-dismiss="modal" data-target="#addFoodItem"><i class="fa fa-plus"></i> Add Item</button>
+                                                            </fieldset>
+                                                            </form>
+
+                                                          </div>
+                                                        </div>
+                                                        <div class="modal-footer"></div>
+                                                      </div>
+
+                                                    </div>
+                                                </div>
+
+                                            <!-- Start of Food Diary Journal tab. -->
                                             <div id="journal">
                                                 <div class="well">
                                                     <h3 class="ng-binding">Monday</h3>
@@ -262,7 +339,10 @@
                                                     </div>
 
                                                     </div>
-                                            </div>
+                                            </div> <!-- End of Food Diary Journal tab. -->
+
+
+                                            <!-- Start of Food Diary Report tab. -->
                                             <div id="food-report">
                                                 <canvas id="fd-report" width="200" height="200"></canvas>
                                                 <!-- Report Details -->
@@ -270,7 +350,36 @@
                                                     <p>Weight Change</p>
                                                     <h1>-5</h1><small>(lb)</small>
                                                 </div>
-                                            </div>
+                                            </div> <!-- End of Food Diary Report tab. -->
+
+                                            <!-- Start of Food Diary Goals tab. -->
+                                            <div id="goals">
+                                                <form id="goal-form">
+                                                    <div class="form-group">
+                                                        <label for="calories">Calories</label>
+                                                        <input type="text" class="form-control" id="calory">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="carbo">Carbohydrates</label>
+                                                        <input type="text" class="form-control" id="carbo">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="fat">Fat</label>
+                                                        <input type="text" class="form-control" id="fat">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="protiem">Protien</label>
+                                                        <input type="text" class="form-control" id="protiem">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="nutrient">Nutrient</label>
+                                                        <input type="text" class="form-control" id="nutrient">
+                                                    </div>
+                                                    <button type="submit" class="btn btn-default">Submit</button>
+                                                    <!-- Button to modal -->
+                                                    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#addGoal" id="addGoalBtn"><i class="fa fa-plus"></i></a>
+                                                </form>
+                                            </div> <!-- End of Food Diary Goals tab. -->
                                         </div>
                                     </div>
                                 </div>

@@ -450,6 +450,13 @@ span.total-cal {
 }
 
 /**
+* Initial Tab Display on Refresh.
+*/ 
+div#journal, div#food-report, div#goals {
+    display: none;
+}
+
+/**
 * Canvas sizes in food diary.
 */
 #journal canvas {
@@ -606,4 +613,27 @@ div#food-report {
     float: right;
     margin-top: -2.5em;
     margin-right: 10%;
+}
+
+/**
+* Food Diary Goals Styles.
+*/
+div#goals {
+    background-color: #FFFBE3; /*#FFE2CA;*/
+}
+form#goal-form {
+    padding: 10px 20px;
+}
+#goal-form > .form-group > label {
+    font-size: initial;
+}
+
+div#goals .btn-default {
+    color: white;
+    background-color: #FF624A;
+    border-color: red;
+}
+
+.btn {
+    padding: 9px 12px !important; 
 }
