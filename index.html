@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-    	<meta charset="utf-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    	<meta name="description" content="">
-    	<meta name="author" content="">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
         <title>My own Template</title>
 
@@ -144,7 +144,9 @@
                                     <div id="calendar"> </div>
                                 </div>
                             </div>
-                        </div>  <!-- Food Diary -->
+                        </div>  
+
+                        <!-- Food Diary -->
                         <div class="panel-group food-diary" id="accordion2">
                             <div class="panel-heading" id="fooddiary">
                                 <h4 class="panel-title">
@@ -173,6 +175,8 @@
                                             </ul>
                                         </nav>
                                         <div id="food-diary-contents">
+
+                                            <!-- Start of Food Diary Today tab. -->
                                             <div id="today">
                                                 <!-- navigation in tab "Today" -->
                                                 <nav id="food-diary-today-nav" class="navbar navbar-light">
@@ -292,7 +296,7 @@
                                                     </div>
 
                                                     <div class="meal-time">
-                                                      <a href=""><div id="breakmeal"></div></a>
+                                                      <a><div id="breakmeal"></div></a>
                                                       <label id="bf-label">Breakfast</label>
 
                                                       <div id="item-list">
@@ -305,7 +309,7 @@
                                                     </div>
 
                                                     <div class="meal-time">
-                                                      <a href=""><div id="lunchmeal"></div></a>
+                                                      <a><div id="lunchmeal"></div></a>
                                                       <label id="lunch-label">Lunch</label>
 
                                                       <div id="item-list">
@@ -317,7 +321,7 @@
                                                     </div>
 
                                                     <div class="meal-time">
-                                                      <a href=""><div id="dinnermeal"></div></a>
+                                                      <a><div id="dinnermeal"></div></a>
                                                       <label id="dinner-label">Dinner</label>
 
                                                       <div id="item-list">
@@ -328,7 +332,7 @@
                                                     </div>
 
                                                     <div class="meal-time">
-                                                      <a href=""><div id="snackmeal"></div></a>
+                                                      <a><div id="snackmeal"></div></a>
                                                       <label id="snack-label">Snack</label>
 
                                                       <div id="item-list">
@@ -339,7 +343,7 @@
                                                     </div>
 
                                                     </div>
-                                            </div> <!-- End of Food Diary Journal tab. -->
+                                            </div>
 
                                             <!-- Start of Food Diary Report tab. -->
                                             <div id="food-report">
@@ -349,7 +353,7 @@
                                                     <p>Weight Change</p>
                                                     <h1>-5</h1><small>(lb)</small>
                                                 </div>
-                                            </div> <!-- End of Food Diary Report tab. -->
+                                            </div>
 
                                             <!-- Start of Food Diary Goals tab. -->
                                             <div id="goals">
@@ -414,7 +418,8 @@
 
                                                   </div>
                                                 </div>
-                                            </div> <!-- End of Food Diary Goals tab. -->
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -605,49 +610,94 @@
                 }); 
             </script>
 
-            <script> /* Chart JS for Food Diary Journal */ 
-                var ctx = document.getElementById("journal-items");
-                var myChart = new Chart(ctx, {
-                    type: 'pie',
-                    data: {
-                        labels: ["Calories", "Fat", "Protien", "Cabs"],
-                        datasets: [{
-                            label: 'Exercises Statistics',
-                            data: [12, 19, 3, 5],
-                            backgroundColor: [
-                                'rgba(255, 99, 132, 0.5)',
-                                'rgba(54, 162, 235, 0.5)',
-                                'rgba(255, 206, 86, 0.5)',
-                                'rgba(75, 192, 192, 0.5)'
-                            ],
-                            borderColor: [
-                                'rgba(255 ,99, 132, 3)',
-                                'rgba(54, 162, 235, 3)',
-                                'rgba(255, 206, 86, 3)',
-                                'rgba(75, 192, 192, 3)'
-                            ],
-                            borderWidth: 1,
-                            scaleFontColor: 'rgba(54, 162, 235, 1)'
-                        }],
-                    },
-                    options: {
-                        scales: {
-                            yAxes: [{
-                                ticks: {
-                                    beginAtZero:true,
-                                    display: false
-                                },
-                                gridLines : {
-                                    display : false,
-                                    lineWidth: 0,
-                                }
-                            }]
-                        },
-                        legend: {
-                            display: true
-                        }
+            <script> /* Chart JS for Food Diary Journal */
+
+                /**
+                * Types of meal to be displayed in chart.
+                */
+                var test = document.getElementById("journal");
+
+                /**
+                * The data to be displayed in the chart for the journal.
+                * Depends on what type of meal time the user wishes to see.
+                */
+                function whatClicked(evt) {
+                    if(evt.target.id == 'breakmeal') {
+                        var datus = new Array();
+                        datus.push("1");
+                        datus.push("2");
+                        datus.push("3");
+                        datus.push("4");
                     }
-                }); 
+                    else if(evt.target.id == 'lunchmeal') {
+                        var datus = new Array();
+                        datus.push("5");
+                        datus.push("6");
+                        datus.push("7");
+                        datus.push("8");
+                    }
+                    else if(evt.target.id == 'dinnermeal') {
+                        var datus = new Array();
+                        datus.push("9");
+                        datus.push("6");
+                        datus.push("5");
+                        datus.push("4");
+                    }
+                    else if(evt.target.id == 'snackmeal') {
+                        var datus = new Array();
+                        datus.push("3");
+                        datus.push("6");
+                        datus.push("5");
+                        datus.push("1");
+                    }
+
+                    var ctx = document.getElementById("journal-items");
+                    var myChart = new Chart(ctx, {
+                        type: 'pie',
+                        data: {
+                            labels: ["Calories", "Fat", "Protien", "Cabs"],
+                            datasets: [{
+                                label: 'Exercises Statistics',
+                                data: datus,
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.5)',
+                                    'rgba(54, 162, 235, 0.5)',
+                                    'rgba(255, 206, 86, 0.5)',
+                                    'rgba(75, 192, 192, 0.5)'
+                                ],
+                                borderColor: [
+                                    'rgba(255 ,99, 132, 3)',
+                                    'rgba(54, 162, 235, 3)',
+                                    'rgba(255, 206, 86, 3)',
+                                    'rgba(75, 192, 192, 3)'
+                                ],
+                                borderWidth: 1,
+                                scaleFontColor: 'rgba(54, 162, 235, 1)'
+                            }],
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero:true,
+                                        display: false
+                                    },
+                                    gridLines : {
+                                        display : false,
+                                        lineWidth: 0,
+                                    }
+                                }]
+                            },
+                            legend: {
+                                display: true
+                            }
+                        }
+                    }); 
+                }
+
+                test.addEventListener("click", whatClicked, false);
+
+                /* End */
             </script>
 
             <script> /* Chart JS for Food Diary Report */ 
@@ -656,18 +706,32 @@
                     type: 'line',
                     data: {
                         labels: ["6/27", "6/28", "6/29", "6/30", "7/01"],
-                        datasets: [{
-                            label: 'June 27 - July 01, 2016',
-                            data: [140, 230, 120, 350, 250],
-                            backgroundColor: [
-                                'rgba(255, 99, 132, 0.5)',
-                            ],
-                            borderColor: [
-                                'rgba(255 ,99, 132, 3)',
-                            ],
-                            borderWidth: 2,
-                            scaleFontColor: 'rgba(54, 162, 235, 1)'
-                        }],
+                        datasets: [
+                            {
+                                label: 'Health Status',
+                                data: [140, 230, 120, 350, 250],
+                                backgroundColor: [
+                                    'rgba(151, 187, 205, 0.5)',
+                                ],
+                                borderColor: [
+                                    'rgba(151, 187, 205, 3)',
+                                ],
+                                borderWidth: 2,
+                                scaleFontColor: 'rgba(54, 162, 235, 1)'
+                            },
+                            {
+                                label: 'Goals Point',
+                                data: [230, 120, 140, 250, 350],
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.5)',
+                                ],
+                                borderColor: [
+                                    'rgba(255 ,99, 132, 3)',
+                                ],
+                                borderWidth: 2,
+                                scaleFontColor: 'rgba(54, 162, 235, 1)'
+                            }
+                        ],
                     },
                     options: {
                         scales: {
