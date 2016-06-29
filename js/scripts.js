@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 	/**
 	* Food Diary Custom JQuery functions.
 	*/
@@ -36,10 +37,11 @@ $(document).ready(function(){
     	$('.panel-heading').toggleClass("active");
     });
 
+
     /* Hover on Breakfast */
     $('a > div#breakmeal').hover(
     	function () {
-    	$('label#bf-label').css('display','block');
+    	$('label#bf-label').css({ display: 'block', cursor: 'pointer' });
     	},
     	function () {
     	$('label#bf-label').css('display','none');
@@ -48,7 +50,7 @@ $(document).ready(function(){
     /* Hover on Breakfast */
     $('a > div#lunchmeal').hover(
     	function () {
-    	$('label#lunch-label').css('display','block');
+    	$('label#lunch-label').css({ display: 'block', cursor: 'pointer' });
     	},
     	function () {
     	$('label#lunch-label').css('display','none');
@@ -57,7 +59,7 @@ $(document).ready(function(){
     /* Hover on Breakfast */
     $('a > div#dinnermeal').hover(
     	function () {
-    	$('label#dinner-label').css('display','block');
+    	$('label#dinner-label').css({ display: 'block', cursor: 'pointer' });
     	},
     	function () {
     	$('label#dinner-label').css('display','none');
@@ -66,7 +68,7 @@ $(document).ready(function(){
     /* Hover on Breakfast */
     $('a > div#snackmeal').hover(
     	function () {
-    	$('label#snack-label').css('display','block');
+    	$('label#snack-label').css({ display: 'block', cursor: 'pointer' });
     	},
     	function () {
     	$('label#snack-label').css('display','none');
@@ -81,5 +83,21 @@ $(document).ready(function(){
         $('<div class="form-group"><label for="'+nutrient_name+'">'+nutrient_name+'</label><input type="text" class="form-control" id="'+nutrient_name+'"></div>').insertAfter('form#goal-form input[type=text]:eq('+(text_input.length - 1)+')').focus();
         e.preventDefault();
 
+    });
+
+    /**
+    * Reloading the chart when slided to the next date in Food Diary Journal.
+    
+
+    $(".my-slider > ul > li").click(function(b) {
+         $("canvas#journal-items" ).remove();  
+        /* $(".my-slider > ul > li > .well").append('<canvas id="journal-items" width="200" height="200"></canvas>');
+        $('<canvas id="journal-items" width="200" height="200"></canvas>').appendTo('.my-slider > ul > li.unslider-active > .well > .journal-info');
+    });
+    */
+
+    $(".my-slider > ul > li.unslider-active").click(function(b) {
+        $("canvas#journal-items" ).remove();
+        $('<canvas id="journal-items" width="200" height="200"></canvas>').appendTo('.my-slider > ul > li.unslider-active > .well > .journal-info');
     });
 }); 

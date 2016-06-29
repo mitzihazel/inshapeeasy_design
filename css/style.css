@@ -471,11 +471,19 @@ div#journal, div#food-report, div#goals {
 }
 
 /* Background color for the journal in Food Diary. */
-.well {
-    background-color: #FFE2CA !important;
-    font-weight: bolder;
+div#journal {
+    background-color: #FFE2CA;
 }
 
+.well {
+    font-weight: bolder;
+    background-color: #FFE2CA !important;
+}
+
+/* Customizin design in the Food diary journal carousel. */
+.unslider-nav ol li {
+    border: 5px solid red !important;
+}
 /**
 * Food diary today captions content wrapper.
 */
@@ -672,4 +680,9 @@ div#addFoodItem .modal-header .close {
     filter: alpha(opacity=20);
     opacity: 3.2;
     color: white;
+}
+
+/* Slider custom for bottom margin. */
+div.my-slider > ul > li {
+    margin-bottom: 20px;
 }
