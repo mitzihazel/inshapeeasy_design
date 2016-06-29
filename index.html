@@ -39,26 +39,21 @@
         <!-- Main JS -->
         <script src="js/scripts.js"></script>
 
-        <!-- Slider caller -->
-        <script src="slider/src/js/unslider.js"></script>
-        <link rel="stylesheet" href="slider/dist/css/unslider.css">
-        <link rel="stylesheet" href="slider/dist/css/unslider-dots.css">
-
     </head>
     <body>
         <div class="container">
             <div id="whole-wrapper">
                 <div class="row">
                     <div class="col-md-4"> <!-- user Account -->
-                        <div class="panel-group" id="accordion">
+                        <div class="panel-group" id="user-accordion">
                             <div class="panel-heading" id="user">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-target="#collapseOne" href="#collapseOne">
+                                    <a data-toggle="collapse" data-target="#account" href="#account">
                                         Account
                                     </a>
                                 </h4>
                             </div>
-                            <div id="collapseOne" class="panel-collapse collapse in">
+                            <div id="account" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <div class="profile-image">
                                        <div class="circular"></div>
@@ -107,15 +102,15 @@
                                 </div>
                             </div>
                         </div> <!-- Connections -->
-                        <div class="panel-group connects" id="accordion2">
+                        <div class="panel-group connects" id="connection-accordion">
                             <div class="panel-heading" id="connect">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-target="#collapseTwo" href="#collapseTwo">
+                                    <a data-toggle="collapse" data-target="#conns" href="#conns">
                                         Connections
                                     </a>
                                 </h4>
                             </div>
-                            <div id="collapseTwo" class="panel-collapse collapse in">
+                            <div id="conns" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <div class="connections">
                                         <ul class="soc" align="center">
@@ -136,15 +131,15 @@
                         </div> 
                     </div>
                     <div class="col-md-4"> <!-- Calendar --> 
-                        <div class="panel-group">
+                        <div class="panel-group" id="calendar-accordion">
                             <div class="panel-heading" id="cal">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-target="#calendar" href="#calendar">
+                                    <a data-toggle="collapse" data-target="#calendar1" href="#calendar1">
                                         Calendar
                                     </a>
                                 </h4>
                             </div>
-                            <div id="calendar" class="panel-collapse collapse in">
+                            <div id="calendar1" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <div id="calendar"> </div>
                                 </div>
@@ -152,7 +147,7 @@
                         </div>  
 
                         <!-- Food Diary -->
-                        <div class="panel-group food-diary" id="accordion2">
+                        <div class="panel-group food-diary" id="food-diary-accordion">
                             <div class="panel-heading" id="fooddiary">
                                 <h4 class="panel-title">
                                     <a data-toggle="collapse" data-target="#food-diary" href="#food-diary">
@@ -160,7 +155,7 @@
                                     </a>
                                 </h4>
                             </div>
-                            <div id="food-diary" class="panel-collapse collapse in">
+                            <div id="food-diary" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <div id="food-diary">
                                         <nav id="food-diary-nav" class="navbar navbar-collapse navbar-light">
@@ -187,20 +182,25 @@
                                                 <nav id="food-diary-today-nav" class="navbar navbar-light">
                                                     <ul class="nav nav-pills">
                                                         <li>
-                                                            <a href="#breakfast">Breakfast</a>
-                                                            <span class="total-cal">251 cal</span>
+                                                            <a href="#breakfast">Breakfast
+                                                                <span class="total-cal">251 cal</span>
+                                                            </a>
                                                         </li>
                                                         <li>
-                                                            <a href="#lunch">Lunch</a>
-                                                            <span class="total-cal">251 cal</span>
+                                                            <a href="#lunch">Lunch
+                                                                <span class="total-cal">251 cal</span>
+                                                            </a>
                                                         </li>
                                                         <li>
-                                                            <a href="#dinner">Dinner</a>
-                                                            <span class="total-cal">251 cal</span>
+                                                            <a href="#dinner">Dinner
+                                                                <span class="total-cal">251 cal</span>
+                                                            </a>
                                                         </li>
                                                         <li>
-                                                            <a href="#Snack">Snack</a>
-                                                            <span class="total-cal">251 cal</span>
+                                                            <a href="#Snack">Snack
+                                                                <span class="total-cal">251 cal</span>
+                                                            </a>
+ 
                                                         </li>
                                                     </ul>
                                                 </nav>
@@ -293,8 +293,14 @@
                                             <!-- Start of Food Diary Journal tab. -->
                                             <div id="journal">
                                                 <div class="well">
-                                                <h3 class="ng-binding">Monday</h3>
-                                                <div class="date ng-binding">6/27/2016</div>
+                                                    <div class="journal-info-left">
+                                                        <h3 class="ng-binding">Monday</h3>
+                                                        <div class="date ng-binding">6/27/2016</div>
+                                                    </div>
+                                                    <div class="journal-info-right">
+                                                        <!-- Pick the specific date to be displayed in the Journal." -->
+                                                        <input type="date" name="journal-date" class="form-control journal-date">
+                                                    </div>
                                                 <div class="journal-info">
                                                     <!-- Chart Display -->
                                                     <canvas id="journal-items" width="200" height="200"></canvas>
@@ -431,7 +437,7 @@
                         </div>
                     </div>
                     <div class="col-md-4"> <!-- Subscription -->
-                        <div class="panel-group subscription" id="accordion2">
+                        <div class="panel-group subscription" id="subscription-accordion">
                             <div class="panel-heading" id="subcribe">
                                 <h4 class="panel-title">
                                     <a data-toggle="collapse" data-target="#subscription" href="#subscription">
@@ -439,7 +445,7 @@
                                     </a>
                                 </h4>
                             </div>
-                            <div id="subscription" class="panel-collapse collapse in">
+                            <div id="subscription" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <div id="subscript">
                                         <form>
@@ -459,7 +465,7 @@
                         </div>  
                         <!-- Health Reports --> 
                         <div class="health">
-                            <div class="panel-group" id="accordion2">
+                            <div class="panel-group" id="health-report-accordion">
                                 <div class="panel-heading" id="health-report">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" data-target="#health" href="#health">
@@ -467,7 +473,7 @@
                                         </a>
                                     </h4>
                                 </div>
-                                <div id="health" class="panel-collapse collapse in">
+                                <div id="health" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <!-- Date Choices -->
                                         <div class="date-choice">
@@ -772,12 +778,6 @@
                         }
                     }
                 }); 
-            </script>
-            
-            <script> /* Unslider function */
-                jQuery(document).ready(function($) {
-                    $('.my-slider').unslider();
-                });
             </script>
         </div>
     </body>

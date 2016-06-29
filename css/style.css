@@ -446,12 +446,18 @@ nav#food-diary-today-nav > ul > li > a, div#nutrient-choices > ul > li > a {
     margin-left: 0px !important;
 }
 
+/*      When tab is selected effect.    */
+nav#food-diary-today-nav > ul > li > a:focus {
+    color: black !important;
+}
+
 span.total-cal {
     float: right;
-    margin-top: -2em;
-    color: white;
-    font-size: inherit;
+    margin-top: 0em;
+    font-size: smaller;
     margin-right: 5%;
+    z-index: 5;
+    font-weight: normal;
 }
 
 /**
@@ -478,6 +484,17 @@ div#journal {
 .well {
     font-weight: bolder;
     background-color: #FFE2CA !important;
+}
+
+.journal-info-right {
+    float: right;
+    width: 50%;
+    margin-top: 25px;
+}
+
+.journal-info-left {
+    float: left;
+    width: 50%;
 }
 
 /* Customizin design in the Food diary journal carousel. */
@@ -639,6 +656,11 @@ form#goal-form {
 }
 #goal-form > .form-group > label {
     font-size: initial;
+}
+
+label.add-on-nutrients {
+    font-size: initial;
+    margin-top: 1em;
 }
 
 div#goals .btn-default, div#modal-form-add-item .btn-info {
