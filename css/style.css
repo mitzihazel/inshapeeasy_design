@@ -6,7 +6,7 @@ div#whole-wrapper {
 /**
 * User Account Designs.
 */
-@media (min-width: 360px) {
+@media (min-width: 320px) {
 	body {
 		padding: 0px !important;
 		overflow-x: hidden;
@@ -349,6 +349,12 @@ div#health {
 	float: left;
 }
 
+@media (min-width: 320px) {
+    #stat-right {    
+        margin-left: 2px !important;
+    }
+}
+
 #stat-right {
 	float: right;
 	margin-left: 10px;
@@ -381,7 +387,7 @@ div#cal-stats, div#pace-stats, div#speed-stats {
 	float: right;
 }
 
-@media (min-width: 360px) {
+@media (min-width: 320px) {
 	input#subscribe {
 	    width: 14em;
 	}
@@ -447,7 +453,7 @@ nav#food-diary-today-nav > ul > li > a, div#nutrient-choices > ul > li > a {
 }
 
 /*      When tab is selected effect.    */
-nav#food-diary-today-nav > ul > li > a:focus {
+nav#food-diary-today-nav > ul > li > a:focus, nav#food-diary-today-nav > ul > li > a:hover {
     color: black !important;
 }
 
@@ -468,13 +474,25 @@ div#journal, div#food-report, div#goals {
 }
 
 /**
-* Canvas sizes in food diary.
+* Canvas sizes in food diary on different devices.
 */
-#journal canvas {
+
+@media (min-width: 320px) {
+    #journal canvas {
+    width: 310px !important;
+    height: 310px !important;
+    margin: 25px 0px 25px -15px;
+    }
+}
+
+@media (min-width: 360px) {
+    #journal canvas {
     width: 350px !important;
     height: 350px !important;
     margin: 25px 0px 25px -15px;
+    }
 }
+
 
 /* Background color for the journal in Food Diary. */
 div#journal {
