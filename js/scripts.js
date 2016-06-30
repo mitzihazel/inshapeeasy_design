@@ -1,5 +1,39 @@
 $(document).ready(function(){
 
+     $(window).on('hashchange', function() {
+        var hash = window.location.hash;
+        console.log(hash);
+
+        if(hash === '') {
+            window.history.go(0);
+        }
+
+        if(hash === '#todays') {
+            $(window).on('hashchange', function() {
+                window.location.href="";
+            });
+        }
+
+        if(hash === '#journals') {
+            $(window).on('hashchange', function() {
+                window.location.href="";
+            });
+        }
+
+        if(hash === '#reports') {
+            $(window).on('hashchange', function() {
+                window.location.href="";
+            });
+        }
+
+        if(hash === '#goal') {
+            $(window).on('hashchange', function() {
+                window.location.href="";
+            });
+        }
+
+    });
+
     /**
     * Food Diary Custom JQuery functions.
     */
@@ -111,6 +145,7 @@ $(document).ready(function(){
     }
     else if (window.matchMedia("(min-width: 360px)").matches) /* Width for mobile devices */
     {
+
 
         /**
         * Collapse the tabs when page is reloaded.
