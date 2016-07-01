@@ -1,5 +1,12 @@
 $(document).ready(function(){
 
+    /**
+    * Some CSS.
+    */
+
+    $('.panel-group').css('background-color', 'transparent');
+    $('.panel-collapse').css('background-color', 'white');
+
     $("[data-toggle='collapse']").on('click', function(){ 
         var title = $(this).html();
         var href = $(this).attr('href');
@@ -20,9 +27,30 @@ $(document).ready(function(){
             $('.panel-group').css({
                 'opacity': '1',
                 'margin-left': '0px',
-                
+                'margin-right': '0px',
+                'margin-top': '0px',
                 'box-shadow': 'none'
             });
+            $('div#health-report-accordion > .panel-heading').css({
+                'border-bottom-left-radius': '20px',
+                'border-bottom-right-radius': '20px'
+            });
+            $('div#user-accordion > .panel-heading').css({
+                'border-top-left-radius': '20px',
+                'border-top-right-radius': '20px'
+            });
+        }
+        else {
+            $('.panel-group').css('background-color', 'transparent');
+
+            if($('.panel-collapse.collapse.in')) {
+                $('.panel-heading').css({
+                'border-bottom-left-radius': '0px',
+                'border-bottom-right-radius': '0px',
+                'border-top-left-radius': '0px',
+                'border-top-right-radius': '0px'
+                });
+            }
         }
     }
 
@@ -130,36 +158,14 @@ $(document).ready(function(){
     if (window.matchMedia("(min-width: 1280px)").matches) /* Width for mobile devices */
     {
 
-        /**
-        * Collapse tabs when first go tot page.
-        */
         
     }
     else if ((window.matchMedia("(min-width: 320px)").matches) || (window.matchMedia("(min-width: 360px)").matches) || (window.matchMedia("(min-width: 768px)").matches)) /* Width for mobile devices */
     {
-
-
         /**
-        * Collapse the tabs when page is reloaded.
+        * Set Tabs to collapse on first load.
         */
-        $("a[href='#account']").addClass('collapsed');
-        $('div#account').removeClass('in');
-
-        $("a[href='#conns']").addClass('collapsed');
-        $('div#conns').removeClass('in');
-        
-        $("a[href='#calendar1']").addClass('collapsed');
-        $('div#calendar1').removeClass('in');
-
-        $("a[href='#food-diary']").addClass('collapsed');
-        $('div#food-diary').removeClass('in');
-
-        $("a[href='#subscription']").addClass('collapsed');
-        $('div#subscription').removeClass('in');
-
-        $("a[href='#health']").addClass('collapsed');
-        $('div#health').removeClass('in');
-        
+        $('.panel-collapse').collapse('hide');
         /**
         *    This portion checks whether the panel is opened.
         *    If its opened the tab changes design.

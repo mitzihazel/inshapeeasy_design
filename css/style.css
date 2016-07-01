@@ -110,14 +110,7 @@ div#changePass {
     font-size: large;
     font-family: arial, sans-serif;
     color: white;
-    background: #FF624A;
-    /*background: -moz-linear-gradient(left, #FF624A 0%, #FF624A 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, #FF624A), color-stop(5%, #FF624A), color-stop(39%, rgba(246,41,12,1)), color-stop(79%, rgba(241,111,92,1)), color-stop(100%, rgba(231,56,39,1)));
-    background: -webkit-linear-gradient(left, #FF624A 0%, #FF624A 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
-    background: -o-linear-gradient(left, #FF624A 0%, #FF624A 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
-    background: -ms-linear-gradient(left, #FF624A 0%, #FF624A 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
-    background: linear-gradient(to right, #FF624A 0%, #FF624A 5%, rgba(246,41,12,1) 39%, rgba(241,111,92,1) 79%, rgba(231,56,39,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f02f17', endColorstr='#e73827', GradientType=1 ); */
+    background-color: #FF624A !important;
 }
 
 #changePass > .panel-body {
@@ -293,7 +286,7 @@ th.fc-day-header.fc-widget-header {
 
 .fc td.fc-today {
     border-style: double;
-    background-color: rgba(54, 162, 235, 0.5);
+    background-color: rgba(248 ,80 ,50, 0.5);
     color: black;
     font-weight: bold;
 }
@@ -307,15 +300,23 @@ th.fc-day-header.fc-widget-header {
     list-style-type: none;
     position: relative;
     width: 100%;
-    right: 5%;
+    right: 0%;
 }
+
+@media (min-width: 320px) and (max-width: 360px) {
+    .date-choice ul {
+        right: 5%;
+    }
+}
+
 .date-choice li {
     float: left;
-    margin-left: 5%;
+    width: 25%;
 }
 .date-choice ul li a, nav ul li a {
     color: black !important; /*  rgba(255,99,132,1) -- PINK font color for labels. */
     font-weight: bold;
+    word-wrap: break-word;
 }
 
 /**
@@ -335,29 +336,53 @@ div#health {
     margin-top: 20px;
     height: 20em;
     color: white;
-    /*background: rgba(248,80,50,1);
-    background: -moz-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(231,56,39,1) 9%, #FF624A 61%, rgba(246,41,12,1) 89%, rgba(241,111,92,1) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(248,80,50,1)), color-stop(9%, rgba(231,56,39,1)), color-stop(61%, #FF624A), color-stop(89%, rgba(246,41,12,1)), color-stop(100%, rgba(241,111,92,1)));
-    background: -webkit-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(231,56,39,1) 9%, #FF624A 61%, rgba(246,41,12,1) 89%, rgba(241,111,92,1) 100%);
-    background: -o-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(231,56,39,1) 9%, #FF624A 61%, rgba(246,41,12,1) 89%, rgba(241,111,92,1) 100%);
-    background: -ms-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(231,56,39,1) 9%, #FF624A 61%, rgba(246,41,12,1) 89%, rgba(241,111,92,1) 100%);
-    background: linear-gradient(to right, rgba(248,80,50,1) 0%, rgba(231,56,39,1) 9%, #FF624A 61%, rgba(246,41,12,1) 89%, rgba(241,111,92,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#f16f5c', GradientType=1 );*/
+    width: 100%;
 }
 
-#stat-left {
-    float: left;
-}
-
-@media (min-width: 320px) {
-    #stat-right {    
-        margin-left: 2px !important;
+@media (min-width: 768px) and (max-width: 1024px) {
+    .stats-wrapper {
+        font-size: larger;
     }
 }
 
-#stat-right {
-    float: right;
-    margin-left: 10px;
+.stats-wrapper > div {
+    width: 50%;
+}
+
+@media (min-width: 320px) {
+    #stat-left {
+        float: left;
+        margin-left: 5%;
+    }
+
+    #stat-right {
+        float: right;
+        margin-right: 5%;
+    }
+}
+
+@media (min-width: 768px) {
+    #stat-left {
+        float: left;
+        margin-left: 25%;
+    }
+
+    #stat-right {
+        float: right;
+        margin-right: 25%;
+    }
+}
+
+@media (min-width: 1000px) {
+    #stat-left {
+        float: left;
+        margin-left: 5%;
+    }
+
+    #stat-right {
+        float: right;
+        margin-right: 5%;
+    }
 }
 
 div#cardio-stats, div#time-stats, div#bpm-stats {
@@ -390,6 +415,7 @@ div#cal-stats, div#pace-stats, div#speed-stats {
 }
 
 button.btn.btn-primary {
+    width: 100% !important;
     margin-top: 2.3em;
     background-color: #FF624A;
     border-color: red;
@@ -469,17 +495,54 @@ div#journal, div#food-report, div#goals {
 
 @media (min-width: 320px) {
     #journal canvas {
-    width: 310px !important;
-    height: 310px !important;
-    margin: 25px 0px 25px -15px;
+        width: 310px !important;
+        height: 310px !important;
+        margin: 25px 0px 25px -15px;
     }
 }
 
 @media (min-width: 360px) {
     #journal canvas {
-    width: 350px !important;
-    height: 350px !important;
-    margin: 25px 0px 25px -15px;
+        width: 350px !important;
+        height: 350px !important;
+        margin: 25px 0px 25px -15px;
+    }
+}
+
+/**
+* Portrait for devices style.
+*/
+@media (min-width: 480px) {
+    #journal canvas {
+        margin: 25px 0px 25px 50px;
+    }
+
+    div#meal-choice {
+        margin-left: 15%;
+    }
+}
+
+@media (min-width: 640px) {
+    #journal canvas {
+        margin: 25px 0px 25px 100px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #journal canvas {
+        width: 500px !important;
+        height: 500px !important;
+        margin: 25px 0px 25px 110px;
+    }
+
+    div#meal-choice {
+        margin-left: 20%;
+    }
+}
+
+@media (min-width: 1000px) {
+    #journal canvas {
+        margin: 25px 0px 25px -15px;
     }
 }
 
