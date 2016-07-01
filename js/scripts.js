@@ -1,38 +1,30 @@
 $(document).ready(function(){
 
-     $(window).on('hashchange', function() {
-        var hash = window.location.hash;
-        console.log(hash);
+    $("[data-toggle='collapse']").on('click', function(){ 
+        var title = $(this).html();
+        var href = $(this).attr('href');
+        var stateObj = { inshapeeasy: "app" };
+        history.pushState(stateObj, title, "/" + href);
 
-        if(hash === '') {
-            window.history.go(0);
-        }
-
-        if(hash === '#todays') {
-            $(window).on('hashchange', function() {
-                window.location.href="";
-            });
-        }
-
-        if(hash === '#journals') {
-            $(window).on('hashchange', function() {
-                window.location.href="";
-            });
-        }
-
-        if(hash === '#reports') {
-            $(window).on('hashchange', function() {
-                window.location.href="";
-            });
-        }
-
-        if(hash === '#goal') {
-            $(window).on('hashchange', function() {
-                window.location.href="";
-            });
-        }
-
+        console.log('toggle-clicked.');
     });
+
+    window.onpopstate = function (event) {
+      var hash = window.location.hash;
+        console.log(hash);
+        $(hash).collapse('show');
+
+        if(hash === '') 
+        {
+            $('.panel-collapse').collapse('hide');
+            $('.panel-group').css({
+                'opacity': '1',
+                'margin-left': '0px',
+                
+                'box-shadow': 'none'
+            });
+        }
+    }
 
     /**
     * Food Diary Custom JQuery functions.
@@ -143,7 +135,7 @@ $(document).ready(function(){
         */
         
     }
-    else if (window.matchMedia("(min-width: 360px)").matches) /* Width for mobile devices */
+    else if ((window.matchMedia("(min-width: 320px)").matches) || (window.matchMedia("(min-width: 360px)").matches) || (window.matchMedia("(min-width: 768px)").matches)) /* Width for mobile devices */
     {
 
 
@@ -475,326 +467,5 @@ $(document).ready(function(){
 
     } 
     else {
-
-        /**
-        * Collapse the tabs when page is reloaded.
-        */
-        $("a[href='#account']").addClass('collapsed');
-        $('div#account').removeClass('in');
-
-        $("a[href='#conns']").addClass('collapsed');
-        $('div#conns').removeClass('in');
-        
-        $("a[href='#calendar1']").addClass('collapsed');
-        $('div#calendar1').removeClass('in');
-
-        $("a[href='#food-diary']").addClass('collapsed');
-        $('div#food-diary').removeClass('in');
-
-        $("a[href='#subscription']").addClass('collapsed');
-        $('div#subscription').removeClass('in');
-
-        $("a[href='#health']").addClass('collapsed');
-        $('div#health').removeClass('in');
-
-        /**
-        *    This portion checks whether the panel is opened.
-        *    If its opened the tab changes design.
-        */
-
-        /*** ----- This function is for the User Account only. ----- ***/
-        $("a[href='#account']").click(function(e) {
-            if($('div#account').hasClass('in')){
-                console.log('boos');
-                $('div#user-accordion').css({
-                    'width': 'auto',
-                    'margin-right': '0px',
-                    'margin-left': '0px',
-                    'margin-top': '0px',
-                    '-webkit-transition': 'height 2s', /* Safari */
-                    'transition': 'height 2s',
-                    'box-shadow': 'none'
-                });
-
-                /** Hide Effect on the other tabs when this one is clicked. */
-                $('div#food-diary-accordion').css('opacity', '1');
-                $('div#calendar-accordion').css('opacity', '1');
-                $('div#health-report-accordion').css('opacity', '1');
-                $('div#connection-accordion').css('opacity', '1');
-                $('div#subscription-accordion').css('opacity', '1');
-            }
-            else {
-                console.log('naa syay class na in. so naview ni sya.');
-
-                /* Expand the panel to fit the whole screen in mobile. */
-                $('div#user-accordion').css({
-                    'max-width': 'auto',
-                    'margin-right': '-20px',
-                    'margin-left': '-20px',
-                    'margin-top': '-20px',
-                    '-webkit-transition': 'height 2s', /* Safari */
-                    'transition': 'height 2s',
-                    'box-shadow': '0px 0px 30px'
-                });
-
-                /** Hide Effect on the other tabs when this one is clicked. */
-                $('div#food-diary-accordion').css('opacity', '0.2');
-                $('div#calendar-accordion').css('opacity', '0.2');
-                $('div#health-report-accordion').css('opacity', '0.2');
-                $('div#connection-accordion').css('opacity', '0.2');
-                $('div#subscription-accordion').css('opacity', '0.2');
-            }
-
-            /* ------- Scroll to this --------- */
-            $('html, body').animate({
-                scrollTop: $("div#user-accordion").offset().top
-            }, 500);
-
-        }); /** end of click function. */
-
-        /*** ----- End of the User Account functions. ----- ***/
-
-
-        /*** ----- This function is for the Connections only. ----- ***/
-        $("a[href='#conns']").click(function(e) {
-            if($('div#conns').hasClass('in')){
-                console.log('boos');
-                $('div#connection-accordion').css({
-                    'width': 'auto',
-                    'margin-right': '0px',
-                    'margin-left': '0px',
-                    'box-shadow': 'none'
-                });
-
-                /** Hide Effect on the other tabs when this one is clicked. */
-                $('div#user-accordion').css('opacity', '1');
-                $('div#food-diary-accordion').css('opacity', '1');
-                $('div#calendar-accordion').css('opacity', '1');
-                $('div#health-report-accordion').css('opacity', '1');
-                $('div#user-accordion').css('opacity', '1');
-                $('div#subscription-accordion').css('opacity', '1');
-            }
-            else {
-                console.log('naa syay class na in. so naview ni sya.');
-
-                /* Expand the panel to fit the whole screen in mobile. */
-                $('div#connection-accordion').css({
-                    'max-width': 'auto',
-                    'margin-right': '-20px',
-                    'margin-left': '-20px',
-                    'box-shadow': '0px 0px 30px'
-                });
-
-                /** Hide Effect on the other tabs when this one is clicked. */
-                $('div#user-accordion').css('opacity', '0.2');
-                $('div#food-diary-accordion').css('opacity', '0.2');
-                $('div#calendar-accordion').css('opacity', '0.2');
-                $('div#health-report-accordion').css('opacity', '0.2');
-                $('div#user-accordion').css('opacity', '0.2');
-                $('div#subscription-accordion').css('opacity', '0.2');
-            }
-
-            /* ------- Scroll to this --------- */
-            $('html, body').animate({
-                scrollTop: $("div#connection-accordion").offset().top
-            }, 500);
-
-        }); /** end of click function. */
-
-        /*** ----- This function is for the Calendar only. ----- ***/
-        $("a[href='#calendar1']").click(function(e) {
-            if($('div#calendar1').hasClass('in')){
-                console.log('boos');
-                $('div#calendar-accordion').css({
-                    'width': 'auto',
-                    'margin-right': '0px',
-                    'margin-left': '0px',
-                    '-webkit-transition': 'height 2s', /* Safari */
-                    'transition': 'height 2s',
-                    'box-shadow': 'none'
-                });
-
-                /** Hide Effect on the other tabs when this one is clicked. */
-                $('div#user-accordion').css('opacity', '1');
-                $('div#food-diary-accordion').css('opacity', '1');
-                $('div#connection-accordion').css('opacity', '1');
-                $('div#health-report-accordion').css('opacity', '1');
-                $('div#user-accordion').css('opacity', '1');
-                $('div#subscription-accordion').css('opacity', '1');
-            }
-            else {
-                console.log('naa syay class na in. so naview ni sya.');
-
-                /* Expand the panel to fit the whole screen in mobile. */
-                $('div#calendar-accordion').css({
-                    'max-width': 'auto',
-                    'margin-right': '-20px',
-                    'margin-left': '-20px',
-                    '-webkit-transition': 'height 2s', /* Safari */
-                    'transition': 'height 2s',
-                    'box-shadow': '0px 0px 30px'
-                });
-
-                /** Hide Effect on the other tabs when this one is clicked. */
-                $('div#user-accordion').css('opacity', '0.2');
-                $('div#food-diary-accordion').css('opacity', '0.2');
-                $('div#connection-accordion').css('opacity', '0.2');
-                $('div#health-report-accordion').css('opacity', '0.2');
-                $('div#user-accordion').css('opacity', '0.2');
-                $('div#subscription-accordion').css('opacity', '0.2');
-            }
-
-            /* ------- Scroll to this --------- */
-            $('html, body').animate({
-                scrollTop: $("div#calendar-accordion").offset().top
-            }, 500);
-
-        }); /** end of click function. */
-
-
-        /*** ----- This function is for the Food Diary only. ----- ***/
-        $("a[href='#food-diary']").click(function(e) {
-            if($('div#food-diary').hasClass('in')){
-                console.log('boos');
-                $('div#food-diary-accordion').css({
-                    'width': 'auto',
-                    'margin-right': '0px',
-                    'margin-left': '0px',
-                    '-webkit-transition': 'height 2s', /* Safari */
-                    'transition': 'height 2s',
-                    'box-shadow': 'none'
-                });
-
-                /** Hide Effect on the other tabs when this one is clicked. */
-                $('div#user-accordion').css('opacity', '1');
-                $('div#calendar-accordion').css('opacity', '1');
-                $('div#connection-accordion').css('opacity', '1');
-                $('div#health-report-accordion').css('opacity', '1');
-                $('div#user-accordion').css('opacity', '1');
-                $('div#subscription-accordion').css('opacity', '1');
-            }
-            else {
-                console.log('naa syay class na in. so naview ni sya.');
-
-                /* Expand the panel to fit the whole screen in mobile. */
-                $('div#food-diary-accordion').css({
-                    'max-width': 'auto',
-                    'margin-right': '-20px',
-                    'margin-left': '-20px',
-                    '-webkit-transition': 'height 2s', /* Safari */
-                    'transition': 'height 2s',
-                    'box-shadow': '0px 0px 30px'
-                });
-
-                /** Hide Effect on the other tabs when this one is clicked. */
-                $('div#user-accordion').css('opacity', '0.2');
-                $('div#calendar-accordion').css('opacity', '0.2');
-                $('div#connection-accordion').css('opacity', '0.2');
-                $('div#health-report-accordion').css('opacity', '0.2');
-                $('div#user-accordion').css('opacity', '0.2');
-                $('div#subscription-accordion').css('opacity', '0.2');
-            }
-
-            /* ------- Scroll to this --------- */
-            $('html, body').animate({
-                scrollTop: $("div#food-diary-accordion").offset().top
-            }, 500);
-
-        }); /** end of click function. */
-
-        /*** ----- This function is for the Subscription only. ----- ***/
-        $("a[href='#subscription']").click(function(e) {
-            if($('div#subscription').hasClass('in')){
-                console.log('boos');
-                $('div#subscription-accordion').css({
-                    'width': 'auto',
-                    'margin-right': '0px',
-                    'margin-left': '0px',
-                    'box-shadow': 'none'
-                });
-
-                /** Hide Effect on the other tabs when this one is clicked. */
-                $('div#user-accordion').css('opacity', '1');
-                $('div#calendar-accordion').css('opacity', '1');
-                $('div#connection-accordion').css('opacity', '1');
-                $('div#food-diary-accordion').css('opacity', '1');
-                $('div#user-accordion').css('opacity', '1');
-                $('div#health-report-accordion').css('opacity', '1');
-            }
-            else {
-                console.log('naa syay class na in. so naview ni sya.');
-
-                /* Expand the panel to fit the whole screen in mobile. */
-                $('div#subscription-accordion').css({
-                    'max-width': 'auto',
-                    'margin-right': '-20px',
-                    'margin-left': '-20px',
-                    'box-shadow': '0px 0px 30px'
-                });
-
-                /** Hide Effect on the other tabs when this one is clicked. */
-                $('div#user-accordion').css('opacity', '0.2');
-                $('div#calendar-accordion').css('opacity', '0.2');
-                $('div#connection-accordion').css('opacity', '0.2');
-                $('div#food-diary-accordion').css('opacity', '0.2');
-                $('div#user-accordion').css('opacity', '0.2');
-                $('div#health-report-accordion').css('opacity', '0.2');
-            }
-
-            /* ------- Scroll to this --------- */
-            $('html, body').animate({
-                scrollTop: $("div#subscription-accordion").offset().top
-            }, 500);
-
-        }); /** end of click function. */
-
-        /*** ----- This function is for the Health Report only. ----- ***/
-        $("a[href='#health']").click(function(e) {
-            if($('div#health').hasClass('in')){
-                console.log('boos');
-                $('div#health-report-accordion').css({
-                    'width': 'auto',
-                    'margin-right': '0px',
-                    'margin-left': '0px',
-                    '-webkit-transition': 'height 2s', /* Safari */
-                    'transition': 'height 2s',
-                    'box-shadow': 'none'
-                });
-
-                /** Hide Effect on the other tabs when this one is clicked. */
-                $('div#user-accordion').css('opacity', '1');
-                $('div#calendar-accordion').css('opacity', '1');
-                $('div#connection-accordion').css('opacity', '1');
-                $('div#food-diary-accordion').css('opacity', '1');
-                $('div#user-accordion').css('opacity', '1');
-                $('div#subscription-accordion').css('opacity', '1');
-            }
-            else {
-                console.log('naa syay class na in. so naview ni sya.');
-
-                /* Expand the panel to fit the whole screen in mobile. */
-                $('div#health-report-accordion').css({
-                    'max-width': 'auto',
-                    'margin-right': '-20px',
-                    'margin-left': '-20px',
-                    '-webkit-transition': 'height 2s', /* Safari */
-                    'transition': 'height 2s'
-                });
-
-                /** Hide Effect on the other tabs when this one is clicked. */
-                $('div#user-accordion').css('opacity', '0.2');
-                $('div#calendar-accordion').css('opacity', '0.2');
-                $('div#connection-accordion').css('opacity', '0.2');
-                $('div#food-diary-accordion').css('opacity', '0.2');
-                $('div#user-accordion').css('opacity', '0.2');
-                $('div#subscription-accordion').css('opacity', '0.2');
-            }
-
-            /* ------- Scroll to this --------- */
-            $('html, body').animate({
-                scrollTop: $("div#health-report-accordion").offset().top
-            }, 500);
-
-        }); /** end of click function. */
     }
 }); 
