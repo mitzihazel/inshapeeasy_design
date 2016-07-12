@@ -1,0 +1,106 @@
+/** =========== Main Style ========= ***/
+
+/* Style for the main form. */
+body {
+	background-color: whitesmoke;
+	font-size: 25px;
+}
+
+form.node-questionnaire-form.node-form {
+    padding: 50px;
+    font-family: 'Helvetica';
+}
+/**
+* Styling the main container of the questions.
+*/
+.layout-region.layout-region-node-main > div > fieldset {
+    background-color: #FF624A;
+    color: white;
+    line-height: 2em;
+    font-size: large;
+    position: relative;
+    box-shadow: 0px 5px 10px gray;
+    margin-top: 3em;
+}
+.layout-region.layout-region-node-main > div {
+	margin-left: 10%;
+	width: 80%;
+	position: relative;
+	line-height: 2em;
+    font-size: large;
+}
+
+.layout-region.layout-region-node-main > div > fieldset > legend {
+	color: black;
+	font-size: larger;
+}
+
+input[type='checkbox'], input[type='radio'] {
+    height: 22px;
+    width: 22px;
+    position: relative;
+    margin: 15px;
+}
+
+/**
+* Diving the answers to columns.
+*/
+.fieldset-wrapper > div > div {
+    float: left;
+    width: 50%;
+}
+
+/* Separate design for the descriptions in the fieldset. */
+.fieldset-wrapper > div.description {
+    color: black;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.layout-region.layout-region-node-main > div > fieldset > legend {
+    font-weight: bold;
+    background-color: #FF624A;
+    padding: 1em;
+    padding-top: 10px;
+    border-radius: 20px;
+    text-decoration: underline;
+}
+
+/**
+* Styles for questions outside fieldsets.
+*/
+.field--type-boolean.field--widget-boolean-checkbox.js-form-wrapper.form-wrapper,
+.js-form-item.form-item.js-form-type-select.form-type-select {
+    background-color: #FFA;
+    box-shadow: 0px 0px 10px black;
+    margin-top: 1em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.js-form-item.form-item.js-form-type-select.form-type-select {
+	padding: 30px;
+}
+
+.field--type-boolean.field--widget-boolean-checkbox.js-form-wrapper.form-wrapper .description {
+    font-size: large;
+    margin-left: 7%;
+}
+
+.field--type-boolean.field--widget-boolean-checkbox.js-form-wrapper.form-wrapper label.option {
+	font-weight: bold;
+}
+
+select {
+    display: inline-block;
+    padding: 4px 3px 3px 5px;
+    margin: 0;
+    font: inherit;
+    outline: none;
+    line-height: 1.2;
+    background: #FF624A;
+    color: white;
+    border: 0;
+    margin-left: 20px;
+    width: 20%;
+}

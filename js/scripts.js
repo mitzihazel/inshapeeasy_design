@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$( document ).ready(function() {
 
     /**
     * Some CSS.
@@ -474,4 +474,4 @@ $(document).ready(function(){
     } 
     else {
     }
-}); 
+});
